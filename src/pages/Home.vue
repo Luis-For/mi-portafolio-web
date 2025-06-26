@@ -181,6 +181,8 @@ main .title {
     /* Efecto de desenfoque de fondo */
 }
 
+
+
 /* Estilos responsivos */
 @media (max-width: 768px) {
     #inicio {

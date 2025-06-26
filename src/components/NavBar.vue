@@ -2,7 +2,8 @@
 <div id="NavBar">
     <!-- NAVBAR -->
     <nav class="navbar">
-        <!-- Botón hamburguesa -->
+        <!-- Botón hamburguesa 
+         <ButtomTheme />-->
         <div class="menu-toggle" @click="toggleMenu">
             ☰
         </div>
@@ -18,7 +19,12 @@
 </template>
 
 <script>
+//import ButtomTheme from './ButtomTheme.vue';
+
 export default {
+    components:{
+  //      ButtomTheme
+    },
     data() {
         return {
             sections: [{
@@ -42,7 +48,7 @@ export default {
                     name: "Habilidades"
                 },
                 {
-                    id: "proyectos",
+                    id: "projects-container",
                     name: "Proyectos"
                 }
             ],
@@ -79,6 +85,8 @@ export default {
 
 <style scoped>
 /* NAVBAR */
+
+
 .navbar {
     position: fixed;
     top: 0;
@@ -86,8 +94,10 @@ export default {
     right: 0;
     width: 100vw;
     overflow: hidden;
-    background: transparent;
-    /*box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); */
+    /*background: transparent;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); */
+    /*background-color: rgb(255, 255, 255, 0.1);*/
+    backdrop-filter: blur(10px);
     padding: 10px 20px;
     z-index: 1000;
     box-sizing: border-box;
