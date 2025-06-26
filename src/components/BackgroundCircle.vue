@@ -70,7 +70,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
   top: 0;
   left: 0;
 }

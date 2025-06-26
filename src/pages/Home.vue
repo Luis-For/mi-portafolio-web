@@ -69,13 +69,25 @@ export default {
                 projects: '2',
                 image: 'https://img.icons8.com/?size=40&id=123603&format=png&color=000000'
             }, {
-                name: 'Angular'
+                name: 'Angular',
+                color: 'red',
+                level: '50',
+                projects: '2',
+                image: 'https://img.icons8.com/?size=40&id=71257&format=png&color=000000'
             }],
             backendSkills: [{
                 name: 'SpringBoot',
                 color: 'green',
                 level: '85',
-                projects: '5'
+                projects: '5',
+                image: 'https://img.icons8.com/?size=40&id=90519&format=png&color=000000'
+            },
+            {
+                name:'Java',
+                color: 'blue',
+                level: '88',
+                projects:'5',
+                image: 'https://img.icons8.com/?size=50&id=13679&format=png&color=000000'
             }],
             basesDeDatos: [{
                 name: 'SpringBoot',
@@ -180,8 +192,6 @@ main .title {
     backdrop-filter: blur(10px);
     /* Efecto de desenfoque de fondo */
 }
-
-
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
