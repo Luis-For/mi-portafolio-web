@@ -2,8 +2,8 @@
 <div id="NavBar">
     <!-- NAVBAR -->
     <nav class="navbar">
-        <!-- Botón hamburguesa 
-         <ButtomTheme />-->
+        <!-- Botón hamburguesa -->
+         <ButtomTheme />
         <div class="menu-toggle" @click="toggleMenu">
             ☰
         </div>
@@ -19,11 +19,11 @@
 </template>
 
 <script>
-//import ButtomTheme from './ButtomTheme.vue';
+import ButtomTheme from './ButtomTheme.vue';
 
 export default {
     components:{
-  //      ButtomTheme
+        ButtomTheme
     },
     data() {
         return {
