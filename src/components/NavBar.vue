@@ -38,7 +38,7 @@ export default {
                     name: "Educación"
                 },
                 {
-                    id: "habilidades",
+                    id: "skillsContainer",
                     name: "Habilidades"
                 },
                 {
@@ -114,6 +114,7 @@ export default {
     padding: 6px 12px;
     transition: background-color 0.3s;
     transition: color 0.3s;
+    transform: font-weight 0.1s;
     border-radius: 4px;
     font-size: larger;
 }
@@ -126,6 +127,7 @@ export default {
     height: 2px;
     width: 0;
     background: linear-gradient(90deg, violet, blue);
+    /* background: linear-gradient(90deg, violet, blue);*/
     transition: width 0.4s ease-in-out;
 }
 
@@ -135,6 +137,7 @@ export default {
 
 .navbar a.hovered {
     color: rgb(0, 0, 0);
+    font-weight: bold;
 }
 
 /* Botón hamburguesa oculto por defecto */
@@ -168,7 +171,7 @@ export default {
     flex-direction: column;
     background: #4130AA;
     padding: 10px;
-    position: absolute;
+    position: fixed;
     top: 50px;
     left: 0;
     width: 100%;

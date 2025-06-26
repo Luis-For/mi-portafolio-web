@@ -1,7 +1,7 @@
 <template>
 <div class="profile-container">
     <div class="sidebar">
-        <img class="profile-pic" src="" alt="Luis Fornaris">
+        <img class="profile-pic" src="../assets/image/profile.webp" alt="Luis Fornaris">
         <h2 class="name">Luis Ángel<br>Fornaris Rodríguez</h2>
         <div class="divider"></div>
         <div class="social-icons">
@@ -69,6 +69,7 @@ export default {
     margin: 0 auto;
     font-family: 'Segoe UI', sans-serif;
     color: #333;
+    padding-bottom: 120px;
 }
 
 .sidebar {

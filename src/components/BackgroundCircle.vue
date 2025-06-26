@@ -13,11 +13,11 @@
                     <li v-for="n in 1" :key="n"></li>
                     <li v-for="n in 1" :key="n"></li>
                     <!--new-->
-                    <li v-for="n in 10" :key="n"></li>
-                    <li v-for="n in 10" :key="n"></li>
-                    <li v-for="n in 10" :key="n"></li>
-                    <li v-for="n in 10" :key="n"></li>
-                    <li v-for="n in 10" :key="n"></li>
+                    <li v-for="n in 1" :key="n"></li>
+                    <li v-for="n in 1" :key="n"></li>
+                    <li v-for="n in 1" :key="n"></li>
+                    <li v-for="n in 1" :key="n"></li>
+                    <li v-for="n in 1" :key="n"></li>
             </ul>
     </div >
     </div>
@@ -79,7 +79,7 @@ body{
     width: 20px;
     height: 20px;
     background: rgba(255, 255, 255, 0.2);
-    animation: animate 25s linear infinite;
+    animation: animate 15s linear infinite;
     bottom: -150px;
     
 }
@@ -161,43 +161,43 @@ body{
 }
 
 .circles li:nth-child(11){
-    left: 85%;
+    left: 20%;
     width: 150px;
     height: 150px;
     animation-delay: 0s;
-    animation-duration: 11s;
+    animation-duration: 15s;
 }
 
 .circles li:nth-child(12){
-    left: 85%;
+    left: 10%;
     width: 150px;
     height: 150px;
     animation-delay: 0s;
-    animation-duration: 11s;
+    animation-duration: 7s;
 }
 
 .circles li:nth-child(13){
-    left: 85%;
-    width: 150px;
-    height: 150px;
-    animation-delay: 0s;
-    animation-duration: 11s;
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
 }
 
 .circles li:nth-child(14){
-    left: 85%;
-    width: 150px;
-    height: 150px;
-    animation-delay: 0s;
-    animation-duration: 11s;
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
 }
 
 .circles li:nth-child(15){
-    left: 85%;
+    left: 43%;
     width: 150px;
     height: 150px;
     animation-delay: 0s;
-    animation-duration: 11s;
+    animation-duration: 13s;
 }
 
 
