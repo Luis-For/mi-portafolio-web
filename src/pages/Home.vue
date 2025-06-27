@@ -2,8 +2,7 @@
 <div id="home">
     <header>
         <BackgroundCircle />
-        <NavBar />
-        <ButtomTheme />
+        <NavBar class="NavBar"/>
     </header>
 
     <main>
@@ -24,10 +23,27 @@
                     <div class="line"></div>
                 </div>
 
-                <ProjectsComponent v-for="n in 7" :key="n" class="project-element" title="Mi Proyecto Vue" description="Este proyecto es una app desarrollada en Vue para mostrar mi portafolio, con componentes reutilizables y diseño adaptable." image="/assets/proyecto1.png" codeLink="https://github.com/usuario/proyecto" />
+                <ProjectsComponent 
+  v-for="project in projects" 
+  :key="project.id"
+  :title="project.title"
+  :description="project.description"
+  :image="project.image"
+  :codeLink="project.codeLink"
+  class="project-element"
+/>  
             </div>
         </section>
+
+        
     </main>
+    <div>
+        <section>
+    
+            <h1>Educación</h1>
+            <EducationComponent v-for="n in 2" :key="n" class="education"/>
+        </section>
+    </div>
     <footer>
         <FooterComponent class="endpage" />
     </footer>
@@ -36,7 +52,7 @@
 
 <script>
 import BackgroundCircle from '../components/BackgroundCircle.vue';
-import ButtomTheme from '../components/ButtomTheme.vue';
+import EducationComponent from '../components/EducationComponent.vue';
 import FooterComponent from '../components/FooterComponent.vue';
 import NavBar from '../components/NavBar.vue';
 import ProfileComponent from '../components/ProfileComponent.vue';
@@ -50,8 +66,8 @@ export default {
         BackgroundCircle,
         ProfileComponent,
         Skills,
-        ButtomTheme,
         ProjectsComponent,
+        EducationComponent,
         FooterComponent
     },
     data() {
@@ -74,7 +90,26 @@ export default {
                 level: '50',
                 projects: '2',
                 image: 'https://img.icons8.com/?size=40&id=71257&format=png&color=000000'
+            },{
+                name: 'JavaScript',
+                color: 'yellow',
+                level: '68',
+                projects: '2',
+                image: 'https://img.icons8.com/?size=40&id=108784&format=png&color=000000'
+            },{
+                name:'HTML',
+                color:'orange',
+                level:'80',
+                projects:'5',
+                image:'https://img.icons8.com/?size=40&id=20909&format=png&color=000000'
+            },{
+                name:'Css',
+                color:'blue',
+                level:'60',
+                projects:'5',
+                image:'https://img.icons8.com/?size=40&id=21278&format=png&color=000000'
             }],
+
             backendSkills: [{
                 name: 'SpringBoot',
                 color: 'green',
@@ -88,18 +123,40 @@ export default {
                 level: '88',
                 projects:'5',
                 image: 'https://img.icons8.com/?size=50&id=13679&format=png&color=000000'
+            },
+            {
+                name: 'Node.js',
+                color: 'green',
+                level: '85',
+                projects: '5',
+                image: 'https://img.icons8.com/?size=40&id=hsPbhkOH4FMe&format=png&color=000000'
+            },
+            {
+                name: 'Express.js',
+                color: 'green',
+                level: '85',
+                projects: '5',
+                image: 'https://img.icons8.com/?size=35&id=kg46nzoJrmTR&format=png&color=FFFFFF'
             }],
             basesDeDatos: [{
-                name: 'SpringBoot',
+                name: 'Postgres',
                 color: 'green',
                 level: '85',
-                projects: '5'
+                projects: '5',
+                image:'https://img.icons8.com/?size=40&id=JRnxU7ZWP4mi&format=png&color=000000'
+            },{
+                name:'Redis',
+                color:'red',
+                level:'83',
+                projects:'2',
+                image:'https://img.icons8.com/?size=40&id=pHS3eRpynIRQ&format=png&color=000000'
             }],
             herramientas: [{
-                name: 'SpringBoot',
-                color: 'green',
-                level: '85',
-                projects: '5'
+                name: 'Postman',
+                color: 'orange',
+                level: '70',
+                projects: '5',
+                image:'https://img.icons8.com/?size=40&id=EPbEfEa7o8CB&format=png&color=000000'
             }],
             projectsClass: [{
                     title: 'MorphoKey',
@@ -110,7 +167,11 @@ export default {
                 {
 
                 }
-            ]
+            ],
+            education:[{
+                title:'Ingeneria de sistemas',
+
+            }]
         }
     }
 }
@@ -126,6 +187,11 @@ main .title {
     display: inline-flex;
     justify-content: center;
     width: 100%;
+}
+
+.NavBar{
+    padding-top: 0%;
+    margin-top: 0%;
 }
 
 #inicio {
