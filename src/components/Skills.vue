@@ -77,7 +77,7 @@ export default {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1.25rem;
-    text-align: left;
+    text-align: center;
 }
 
 .skill-item {

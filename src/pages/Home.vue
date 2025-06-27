@@ -24,14 +24,14 @@
                 </div>
 
                 <ProjectsComponent 
-  v-for="project in projects" 
-  :key="project.id"
-  :title="project.title"
-  :description="project.description"
-  :image="project.image"
-  :codeLink="project.codeLink"
-  class="project-element"
-/>  
+                v-for="project in projects" 
+                :key="project.id"
+                :title="project.title"
+                :description="project.description"
+                :image="project.image"
+                :codeLink="project.codeLink"
+                class="project-element"
+                />  
             </div>
         </section>
 
@@ -137,6 +137,18 @@ export default {
                 level: '85',
                 projects: '5',
                 image: 'https://img.icons8.com/?size=35&id=kg46nzoJrmTR&format=png&color=FFFFFF'
+            },{
+                name:'C#',
+                color:'#058F92',
+                level:'90',
+                projects:'4',
+                image:'https://img.icons8.com/?size=40&id=55205&format=png&color=9D0DC9'
+            },{
+                name:'.NET',
+                color:'#058F92',
+                level:'90',
+                projects:'4',
+                image:'https://img.icons8.com/?size=40&id=1BC75jFEBED6&format=png&color=6A1B9A'
             }],
             basesDeDatos: [{
                 name: 'Postgres',
@@ -150,6 +162,18 @@ export default {
                 level:'83',
                 projects:'2',
                 image:'https://img.icons8.com/?size=40&id=pHS3eRpynIRQ&format=png&color=000000'
+            },{
+                name:'MongoDB',
+                color:'green',
+                level:'70',
+                projects:'3',
+                image:'https://img.icons8.com/?size=40&id=74402&format=png&color=000000'
+            },{
+                name:'MySQL',
+                color:'#058F92',
+                level:'90',
+                projects:'4',
+                image:'https://img.icons8.com/?size=40&id=9nLaR5KFGjN0&format=png&color=058F92'
             }],
             herramientas: [{
                 name: 'Postman',
@@ -177,7 +201,7 @@ export default {
                 image:'https://img.icons8.com/?size=40&id=62452&format=png&color=000000'
             }],
             //
-            projectsClass: [{
+            project: [{
                     title: 'MorphoKey',
                     description: 'XZZZZZZZZZZZ1',
                     image: '',
@@ -197,19 +221,19 @@ export default {
 </script>
 
 <style>
-*{
-    justify-content: center;
-}
+
 body {
     margin: 0%;
     padding: 0%;
-    justify-content: center;
 }
 
 main .title {
-    display: inline-flex;
     justify-content: center;
+    text-align: center;
+    display: inline-flex;
     width: 100%;
+    font-size: 2rem;
+    color: white;
 }
 
 .NavBar{
@@ -255,16 +279,18 @@ main .title {
 
 #skillsContainer {
     display: flex;
+    justify-content: center;
+    
     /* Activa el modelo flexbox */
     gap: 2rem;
     /* Espacio entre los elementos */
-    padding: 2rem;
+    padding: 1rem;
     /* Espacio interno */
     max-width: max-content;
     /* Ancho máximo del contenedor */
-    margin: 0 auto;
+    margin: 0 auto; 
+    width: 50%;
     /* Centrar el contenedor */
-    justify-content: center;
 }
 
 .habilidades {
@@ -289,13 +315,28 @@ main .title {
     }
 
     #skillsContainer {
-        flex-direction: column;
-        /* Apila verticalmente en móviles */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
     }
 
     .habilidades {
-        min-width: 100%;
+        max-width: max-content;
         /* Ocupa todo el ancho en móviles */
     }
 }
+
+/*
+#skillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; /* Alinea los items al inicio verticalmente */
+ /*   gap: 2rem;
+    padding: 1rem;
+    max-width: 1400px; /* Ajusta según necesites */
+ /*   margin: 0 auto; /* Centra el contenedor horizontalmente */
+/*    width: 100%; /* Ocupa todo el ancho disponible */
+/*}*/
 </style>
