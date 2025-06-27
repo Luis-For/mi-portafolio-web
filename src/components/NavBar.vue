@@ -154,11 +154,11 @@ export default {
 
 /* Botón hamburguesa oculto por defecto */
 .menu-toggle {
-  display: flex;
+  display: none;
   font-size: 28px;
   color: white;
   cursor: pointer;
-  z-index: 10000;
+  z-index: -1;
   /*background-image: url('https://img.icons8.com/?size=100&id=68555&format=png&color=000000');*/
 }
 

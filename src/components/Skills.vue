@@ -146,5 +146,7 @@ export default {
     transform: scale(1.02);
 }
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+    
+}
 </style>

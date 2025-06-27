@@ -133,7 +133,7 @@ export default {
             },
             {
                 name: 'Express.js',
-                color: 'green',
+                color: 'white',
                 level: '85',
                 projects: '5',
                 image: 'https://img.icons8.com/?size=35&id=kg46nzoJrmTR&format=png&color=FFFFFF'
@@ -157,7 +157,26 @@ export default {
                 level: '70',
                 projects: '5',
                 image:'https://img.icons8.com/?size=40&id=EPbEfEa7o8CB&format=png&color=000000'
+            },{
+                name:'AWS',
+                color:'black',
+                level:'65',
+                projects:'2',
+                image:'https://img.icons8.com/?size=40&id=33039&format=png&color=000000'
+            },{
+                name:'Azure',
+                color:'blue',
+                level:'68',
+                projects:'2',
+                image:'https://img.icons8.com/?size=40&id=VLKafOkk3sBX&format=png&color=000000'
+            },{
+                name:'Firebase',
+                color:'orange, yellow',
+                level:'40',
+                projects:'1',
+                image:'https://img.icons8.com/?size=40&id=62452&format=png&color=000000'
             }],
+            //
             projectsClass: [{
                     title: 'MorphoKey',
                     description: 'XZZZZZZZZZZZ1',
@@ -237,7 +256,7 @@ main .title {
     /* Espacio entre los elementos */
     padding: 2rem;
     /* Espacio interno */
-    max-width: 1200px;
+    max-width: max-content;
     /* Ancho máximo del contenedor */
     margin: 0 auto;
     /* Centrar el contenedor */
