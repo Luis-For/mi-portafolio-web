@@ -1,13 +1,13 @@
 <template>
   <div class="project-card">
-    <img :src="image" :alt="title" class="project-image" />
+    <img :src="project.image" :alt="project.title" class="project-image" />
 
     <div class="project-content">
-      <h3 class="project-title">{{ title }}</h3>
-      <p class="project-description">{{ description }}</p>
+      <h3 class="project-title">{{ project.title }}</h3>
+      <p class="project-description">{{ project.description }}</p>
 
       <div class="project-buttons">
-        <a :href="codeLink" target="_blank" rel="noopener noreferrer" class="code-button">
+        <a :href="project.url" target="_blank" rel="noopener noreferrer" class="code-button">
           Ver código
         </a>
         <!-- Puedes agregar más íconos aquí -->
@@ -49,5 +49,10 @@ export default {
     max-height: max-content;
     background-color: rgba(66, 49, 171, 0.40);
     border-radius: 1rem;
+}
+
+img{
+  display: flex;
+  justify-content: center;
 }
 </style>

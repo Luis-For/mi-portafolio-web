@@ -123,6 +123,8 @@ export default {
     gap: 15px;
     justify-content: center;
     margin-top: auto;
+    color: black;
+
 }
 
 .social-icons a {
@@ -158,7 +160,7 @@ export default {
     display: flex;
     gap: 15px;
     margin-bottom: 30px;
-    justify-content: center;
+    justify-content: baseline;
 }
 
 .btn-primary {

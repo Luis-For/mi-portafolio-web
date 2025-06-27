@@ -3,7 +3,6 @@
     <!-- NAVBAR -->
     <nav class="navbar">
         <!-- Botón hamburguesa -->
-         <ButtomTheme />
         <div class="menu-toggle" @click="toggleMenu">
             ☰
         </div>
@@ -13,6 +12,7 @@
                     {{ section.name }}
                 </a>
             </li>
+            <ButtomTheme />
         </ul>
     </nav>
 </div>
@@ -101,6 +101,8 @@ export default {
     padding: 10px 20px;
     z-index: 1000;
     box-sizing: border-box;
+    margin-top: 0%;
+
 }
 
 .navbar ul {
@@ -152,11 +154,12 @@ export default {
 
 /* Botón hamburguesa oculto por defecto */
 .menu-toggle {
-  display: none;
+  display: flex;
   font-size: 28px;
   color: white;
   cursor: pointer;
   z-index: 10000;
+  /*background-image: url('https://img.icons8.com/?size=100&id=68555&format=png&color=000000');*/
 }
 
 /* SECTIONS */
@@ -185,6 +188,7 @@ export default {
     top: 50px;
     left: 0;
     width: 100%;
+    z-index: 9999;
   }
 
   .navbar ul.open {
