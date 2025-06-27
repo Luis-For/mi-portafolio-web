@@ -3,9 +3,14 @@
     <!-- NAVBAR -->
     <nav class="navbar">
         <!-- Botón hamburguesa -->
-        <div class="menu-toggle" @click="toggleMenu">
-            ☰
-        </div>
+        <div 
+  class="menu-toggle" 
+  @click="toggleMenu"
+  :aria-expanded="menuOpen"
+  aria-label="Menú principal"
+>
+  ☰
+</div>
         <ul :class="{ open: menuOpen }">
             <li v-for="section in sections" :key="section.id">
                 <a :href="'#' + section.id" @mouseenter="onHover(section.id)" @mouseleave="onLeave(section.id)" @click.prevent="scrollToSection(section.id)" :class="{ hovered: hoveredSection === section.id }">
@@ -169,6 +174,10 @@ export default {
     min-height: 100vh;
     border-bottom: 1px solid #ccc;
 }
+/* Evita el scroll cuando el menú está abierto */
+body.menu-open {
+  overflow: hidden;
+}
 
 @media (max-width: 768px) {
     nav {
@@ -192,7 +201,8 @@ export default {
   }
 
   .navbar ul.open {
-    display: flex;
+    display: list-item;
+
   }
 
   .navbar li {

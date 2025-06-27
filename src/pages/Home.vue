@@ -197,9 +197,13 @@ export default {
 </script>
 
 <style>
+*{
+    justify-content: center;
+}
 body {
     margin: 0%;
     padding: 0%;
+    justify-content: center;
 }
 
 main .title {
