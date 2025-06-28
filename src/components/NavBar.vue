@@ -2,7 +2,7 @@
   <nav class="navbar">
     <!-- Logo o nombre del sitio (opcional) -->
     <div class="navbar-brand">
-      <!-- Puedes agregar un logo aquí -->
+        <img src="../assets/image/Systems_and_technology_programming_company_logo-removebg-preview.png" width="150"/>
     </div>
     
     <!-- Botón hamburguesa (solo móvil) -->

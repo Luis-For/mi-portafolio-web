@@ -41,7 +41,9 @@
         <section>
     
             <h1>Educación</h1>
-            <EducationComponent v-for="n in 2" :key="n" class="education"/>
+            <TimeLineComponent/>
+            <!--<EducationComponent v-for="n in 2" :key="n" class="education"/>-->
+            
         </section>
     </div>
     <footer>
@@ -52,12 +54,13 @@
 
 <script>
 import BackgroundCircle from '../components/BackgroundCircle.vue';
-import EducationComponent from '../components/EducationComponent.vue';
+//import EducationComponent from '../components/EducationComponent.vue';
 import FooterComponent from '../components/FooterComponent.vue';
 import NavBar from '../components/NavBar.vue';
 import ProfileComponent from '../components/ProfileComponent.vue';
 import ProjectsComponent from '../components/ProjectsComponent.vue';
 import Skills from '../components/Skills.vue';
+import TimeLineComponent from '../components/TimeLineComponent.vue';
 
 export default {
     name: 'Home',
@@ -67,7 +70,8 @@ export default {
         ProfileComponent,
         Skills,
         ProjectsComponent,
-        EducationComponent,
+        //EducationComponent,
+        TimeLineComponent,
         FooterComponent
     },
     data() {

@@ -5,10 +5,10 @@
         <h2 class="name">Luis Ángel<br>Fornaris Rodríguez</h2>
         <div class="divider"></div>
         <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+            <!--<a href="#"><i class="fab fa-facebook-f"></i></a>-->
+            <!--<a href="#"><i class="fab fa-twitter"></i></a>-->
+            <a href="#"><i class="fab fa-linkedin-in"></i><img src="https://img.icons8.com/?size=60&id=13930&format=png&color=000000" /></a>
+            <a href="#"><i class="fab fa-instagram"><img src="https://img.icons8.com/?size=60&id=62856&format=png&color=000000" alt=""></i></a>
         </div>
     </div>
     <div class="main-content">
