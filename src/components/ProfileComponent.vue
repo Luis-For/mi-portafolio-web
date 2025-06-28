@@ -81,6 +81,11 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: background-color 0.3s;
+}
+
+.sidebar::hover{
+    background-color: #666;
 }
 
 .profile-pic {

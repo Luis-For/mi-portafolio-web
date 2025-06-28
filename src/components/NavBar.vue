@@ -1,212 +1,230 @@
 <template>
-<div id="NavBar">
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <!-- Botón hamburguesa -->
-        <div 
-  class="menu-toggle" 
-  @click="toggleMenu"
-  :aria-expanded="menuOpen"
-  aria-label="Menú principal"
->
-  ☰
-</div>
-        <ul :class="{ open: menuOpen }">
-            <li v-for="section in sections" :key="section.id">
-                <a :href="'#' + section.id" @mouseenter="onHover(section.id)" @mouseleave="onLeave(section.id)" @click.prevent="scrollToSection(section.id)" :class="{ hovered: hoveredSection === section.id }">
-                    {{ section.name }}
-                </a>
-            </li>
-            <ButtomTheme />
-        </ul>
-    </nav>
-</div>
+  <nav class="navbar">
+    <!-- Logo o nombre del sitio (opcional) -->
+    <div class="navbar-brand">
+      <!-- Puedes agregar un logo aquí -->
+    </div>
+    
+    <!-- Botón hamburguesa (solo móvil) -->
+    <button 
+      class="menu-toggle" 
+      @click="toggleMenu"
+      :aria-expanded="menuOpen"
+      aria-label="Menú principal"
+    >
+      <div class="hamburger" :class="{ 'open': menuOpen }">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </button>
+    
+    <!-- Menú de navegación -->
+    <ul :class="{ 'open': menuOpen }">
+      <li v-for="section in sections" :key="section.id">
+        <a 
+          :href="'#' + section.id" 
+          @click.prevent="scrollToSection(section.id)"
+          :class="{ 'hovered': hoveredSection === section.id }"
+          @mouseenter="onHover(section.id)"
+          @mouseleave="onLeave(section.id)"
+        >
+          {{ section.name }}
+        </a>
+      </li>
+      <li>
+        <ButtomTheme />
+      </li>
+    </ul>
+  </nav>
 </template>
 
 <script>
 import ButtomTheme from './ButtomTheme.vue';
 
 export default {
-    components:{
-        ButtomTheme
+  components: {
+    ButtomTheme
+  },
+  data() {
+    return {
+      sections: [
+        { id: "inicio", name: "Inicio" },
+        { id: "servicios", name: "Servicios" },
+        { id: "contacto", name: "Contacto" },
+        { id: "educación", name: "Educación" },
+        { id: "skillsContainer", name: "Habilidades" },
+        { id: "projects-container", name: "Proyectos" }
+      ],
+      hoveredSection: null,
+      menuOpen: false,
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.menuOpen = !this.menuOpen;
+      // Agrega/remueve clase al body para bloquear scroll
+      document.body.classList.toggle('menu-open', this.menuOpen);
     },
-    data() {
-        return {
-            sections: [{
-                    id: "inicio",
-                    name: "Inicio"
-                },
-                {
-                    id: "servicios",
-                    name: "Servicios"
-                },
-                {
-                    id: "contacto",
-                    name: "Contacto"
-                },
-                {
-                    id: "educación",
-                    name: "Educación"
-                },
-                {
-                    id: "skillsContainer",
-                    name: "Habilidades"
-                },
-                {
-                    id: "projects-container",
-                    name: "Proyectos"
-                }
-            ],
-            hoveredSection: null,
-            menuOpen: false,
-        };
+    scrollToSection(id) {
+      if (window.innerWidth <= 768) {
+        this.menuOpen = false;
+        document.body.classList.remove('menu-open');
+      }
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({
+          behavior: "smooth"
+        });
+      }
     },
-    methods: {
-        toggleMenu() {
-            this.menuOpen = !this.menuOpen;
-        },
-        closeMenu() {
-            this.menuOpen = false;
-        },
-        scrollToSection(id) {
-            const section = document.getElementById(id);
-            if (section) {
-                section.scrollIntoView({
-                    behavior: "smooth"
-                });
-            }
-        },
-        onHover(id) {
-            this.hoveredSection = id;
-        },
-        onLeave(id) {
-            if (this.hoveredSection === id) {
-                this.hoveredSection = null;
-            }
-        },
+    onHover(id) {
+      this.hoveredSection = id;
     },
+    onLeave() {
+      this.hoveredSection = null;
+    },
+  },
 };
 </script>
 
 <style scoped>
-/* NAVBAR */
-
-
+/* Estilos base del navbar */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100vw;
-    overflow: hidden;
-    /*background: transparent;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); */
-    /*background-color: rgb(255, 255, 255, 0.1);*/
-    backdrop-filter: blur(10px);
-    padding: 10px 20px;
-    z-index: 1000;
-    box-sizing: border-box;
-    margin-top: 0%;
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  padding: 10px 20px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
 }
 
+/* Estilos del menú normal (escritorio) */
 .navbar ul {
-    display: flex;
-    justify-content: end;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 15px;
 }
 
 .navbar li {
-    margin-right: 20px;
+  margin: 0;
 }
 
 .navbar a {
-    position: relative;
-    left: auto;
-    color: white;
-    text-decoration: none;
-    padding: 6px 12px;
-    transition: background-color 0.3s;
-    transition: color 0.3s;
-    transform: font-weight 0.1s;
-    border-radius: 4px;
-    font-size: larger;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  display: block;
 }
 
 .navbar a::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 2px;
-    width: 0;
-    background: linear-gradient(90deg, violet, blue);
-    /* background: linear-gradient(90deg, violet, blue);*/
-    transition: width 0.4s ease-in-out;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(90deg, violet, blue);
+  transition: width 0.4s ease;
 }
 
+.navbar a:hover::after,
 .navbar a.hovered::after {
-    width: 100%;
+  width: 100%;
 }
 
+.navbar a:hover,
 .navbar a.hovered {
-    color: rgb(0, 0, 0);
-    font-weight: bold;
+  color: black;
+  font-weight: bold;
 }
 
-/* Botón hamburguesa oculto por defecto */
+/* Estilos del botón hamburguesa (oculto por defecto) */
 .menu-toggle {
   display: none;
-  font-size: 28px;
-  color: white;
+  background: none;
+  border: none;
   cursor: pointer;
-  z-index: -1;
-  /*background-image: url('https://img.icons8.com/?size=100&id=68555&format=png&color=000000');*/
+  padding: 10px;
+  z-index: 1001;
 }
 
-/* SECTIONS */
-.section {
-    padding: 100px 20px;
-    margin-top: 50px;
-    min-height: 100vh;
-    border-bottom: 1px solid #ccc;
-}
-/* Evita el scroll cuando el menú está abierto */
-body.menu-open {
-  overflow: hidden;
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
 }
 
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+/* Estilos para móvil (menú hamburguesa) */
 @media (max-width: 768px) {
-    nav {
-        margin: 3%;
-    }
-
-      .menu-toggle {
+  .menu-toggle {
     display: block;
   }
 
   .navbar ul {
-    display: none;
-    flex-direction: column;
-    background: #4130AA;
-    padding: 10px;
     position: fixed;
-    top: 50px;
+    top: 0;
     left: 0;
-    width: 100%;
-    z-index: 9999;
+    width: 50%;
+    height: 100vh;
+    background: rgba(65, 48, 170, 0.98);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 0;
+    margin: 0;
   }
 
   .navbar ul.open {
-    display: list-item;
-
+    transform: translateX(0);
   }
 
-  .navbar li {
-    margin: 10px 0;
+  .navbar a {
+    font-size: 1.5rem;
+    padding: 15px 25px;
   }
+
+  /* Animación del icono hamburguesa */
+  .hamburger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+/* Bloquear scroll cuando el menú está abierto */
+body.menu-open {
+  overflow: hidden;
 }
 </style>
