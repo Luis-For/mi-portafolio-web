@@ -21,28 +21,18 @@
                 <div class="projects-header">
                     <h2>Proyectos</h2>
                     <div class="line">
-                        <CardProyectComponent/>
                     </div>
                 </div>
-
-                <ProjectsComponent 
-                v-for="project in projects" 
-                :key="project.id"
-                :title="project.title"
-                :description="project.description"
-                :image="project.image"
-                :codeLink="project.codeLink"
-                class="project-element"
-                />  
+            </div>
+            <div >
+                <CardProyectComponent/>
             </div>
         </section>
 
         
     </main>
-    <div>
+    <div class="proyect-content">
         <section>
-    
-            <h1>Educación</h1>
             <TimeLineComponent/>
             <!--<EducationComponent v-for="n in 2" :key="n" class="education"/>-->
             
@@ -61,7 +51,7 @@ import CardProyectComponent from '../components/CardProyectComponent.vue';
 import FooterComponent from '../components/FooterComponent.vue';
 import NavBar from '../components/NavBar.vue';
 import ProfileComponent from '../components/ProfileComponent.vue';
-import ProjectsComponent from '../components/ProjectsComponent.vue';
+//import ProjectsComponent from '../components/ProjectsComponent.vue';
 import Skills from '../components/Skills.vue';
 import TimeLineComponent from '../components/TimeLineComponent.vue';
 
@@ -72,7 +62,7 @@ export default {
         BackgroundCircle,
         ProfileComponent,
         Skills,
-        ProjectsComponent,
+        //ProjectsComponent,
         //EducationComponent,
         TimeLineComponent,
         CardProyectComponent,
@@ -259,7 +249,8 @@ main .title {
     gap: 2rem;
     justify-content: center;
     /*padding: 10rem 0rem 30rem 0rem;*/
-    padding-bottom: 30rem;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
 }
 
 .projects-header {
@@ -276,13 +267,14 @@ main .title {
     font-size: 2rem;
     margin: 0;
     white-space: nowrap;
+    color: var(--color-text);
     /* para que no se corte */
 }
 
 .projects-header .line {
     flex-grow: 1;
     height: 2px;
-    background-color: black;
+    background-color: var(--color-text);
 }
 
 #skillsContainer {

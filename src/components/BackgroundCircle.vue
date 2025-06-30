@@ -76,7 +76,8 @@ body {
 }
 
 .area-light {
-  background: linear-gradient(#8f94fb, #4130AA);
+  /*background: linear-gradient(#6366F1,#4338CA,  #b94dff,  #9170a7 );*/
+  background: linear-gradient(#5058C7,#898FF1);
   opacity: 1;
 }
 

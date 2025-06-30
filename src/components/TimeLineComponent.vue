@@ -64,6 +64,7 @@
 
 .design-section h1{
     padding: 2%;
+    color: var(--color-text);
 }
 
 .design {
