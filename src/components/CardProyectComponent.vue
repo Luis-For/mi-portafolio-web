@@ -101,7 +101,6 @@ export default {
     transform: translateY(-2px);
     transform: scale(1.02);
     background-color: #1F1F1F;
-    opacity: 70%;
     animation: rgbBorder 1s linear infinite;
 }
 
