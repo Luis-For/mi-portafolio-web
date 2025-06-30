@@ -21,6 +21,14 @@ const applyTheme = (theme) => {
   currentTheme.value = theme;
   document.documentElement.setAttribute('data-theme', theme);
   localStorage.setItem('theme', theme);
+
+  if(currentTheme.value=='light'){
+    document.documentElement.style.setProperty('--color-text','black');
+    document.documentElement.style.setProperty('--navbar-color-text','black');
+  }else{
+    document.documentElement.style.setProperty('--color-text','white');
+    document.documentElement.style.setProperty('--navbar-color-text','white');
+  }
 };
 
 const toggleTheme = () => {

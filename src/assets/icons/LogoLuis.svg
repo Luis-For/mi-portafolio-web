@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="100" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text {
+      font-family: Arial, sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      fill: #333333;
+    }
+    .systems {
+      font-size: 20px;
+      font-weight: normal;
+    }
+  </style>
+  
+  <rect width="200" height="100" fill="#f0f0f0" rx="10" ry="10"/>
+  
+  <text x="100" y="40" text-anchor="middle">Luis-For</text>
+  <text x="100" y="70" text-anchor="middle" class="systems">Developer</text>
+</svg>

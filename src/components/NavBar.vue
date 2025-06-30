@@ -146,7 +146,7 @@ export default {
 
 .navbar a:hover,
 .navbar a.hovered {
-  color: black;
+  color: var(--navbar-color-text);
   font-weight: bold;
 }
 

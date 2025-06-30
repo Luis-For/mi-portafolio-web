@@ -18,8 +18,8 @@
                 </div>
             </div>
             <div class="timeline-component timeline-content">
-                <h3>CSS</h3>
-                <p>Some Text.</p>
+                <h3>Certificados</h3>
+                <p>Certificados realizados en distintas areas como: git, docker, java, springboot, Postgresql, redis, javaspcript.</p>
                 <div class="state">
                     <h4>EN CURSO</h4>
                 </div>
@@ -40,6 +40,9 @@
                 <h3>Javascript</h3>
                 <p>Some Text.</p>
             </div>
+            <div class="timeline-empty">
+            </div>            
+            
         </div>
     </section>
 </div>

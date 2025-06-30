@@ -147,6 +147,7 @@ export default {
     width: 65%;
     padding: 40px;
     box-sizing: border-box;
+    color: var(--color-text);
 }
 
 .main-content h1 {

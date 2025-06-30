@@ -20,7 +20,9 @@
             <div id="projects-container">
                 <div class="projects-header">
                     <h2>Proyectos</h2>
-                    <div class="line"></div>
+                    <div class="line">
+                        <CardProyectComponent/>
+                    </div>
                 </div>
 
                 <ProjectsComponent 
@@ -54,6 +56,7 @@
 
 <script>
 import BackgroundCircle from '../components/BackgroundCircle.vue';
+import CardProyectComponent from '../components/CardProyectComponent.vue';
 //import EducationComponent from '../components/EducationComponent.vue';
 import FooterComponent from '../components/FooterComponent.vue';
 import NavBar from '../components/NavBar.vue';
@@ -72,6 +75,7 @@ export default {
         ProjectsComponent,
         //EducationComponent,
         TimeLineComponent,
+        CardProyectComponent,
         FooterComponent
     },
     data() {
@@ -251,11 +255,11 @@ main .title {
 
 #projects-container {
     display: flex;
-    flex-direction: column;
-    /* NO 'justify-content: column' */
     align-items: center;
-    padding: 5rem 2rem;
     gap: 2rem;
+    justify-content: center;
+    /*padding: 10rem 0rem 30rem 0rem;*/
+    padding-bottom: 30rem;
 }
 
 .projects-header {
