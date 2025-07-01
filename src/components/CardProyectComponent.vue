@@ -1,6 +1,6 @@
 <template>
 <div class="proyect-container">
-    <b-card v-for="(card, index) in cards" :key="index" :title="card.title" :img-src="card.img" img-alt="Imagen" img-top :tag="card.article" class="mb-2">
+    <b-card class="mb-2" v-for="(card, index) in cards" :key="index" :title="card.title" :img-src="card.img" img-alt="Imagen" img-top :tag="card.article">
         <b-card-imagen>
             <img :src="card.img" />
         </b-card-imagen>
@@ -15,6 +15,9 @@
         </b-card-text>
 
         <b-button :href="card.link" variant="primary" class="text">ver</b-button>
+          <div class="modal">
+    <!--<p>Información adicional del proyecto</p>-->
+  </div>
     </b-card>
 </div>
 </template>
@@ -84,7 +87,7 @@ export default {
     animation: zoomIn 0.5s forwards;
 }
 
-.proyect-container:hover{
+.proyect-container:hover {
     transform: scale(2px);
     animation: rgbColor 3s infinite;
 }
@@ -95,20 +98,32 @@ export default {
     border: 2px solid rgb(255, 255, 255);
     border-radius: 1rem;
     transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
 }
 
-.proyect-container b-card:hover{
+.proyect-container b-card:hover {
     transform: translateY(-2px);
     transform: scale(1.02);
     background-color: #1F1F1F;
-    animation: rgbBorder 1s linear infinite;
+    animation: rgbBorders 1s linear infinite;
 }
 
-@keyframes rgbBorder {
-  0%   { border-color: red; }
-  33%  { border-color: lime; }
-  66%  { border-color: blue; }
-  100% { border-color: red; }
+@keyframes rgbBorders {
+    0% {
+        border-color: red;
+    }
+
+    33% {
+        border-color: lime;
+    }
+
+    66% {
+        border-color: blue;
+    }
+
+    100% {
+        border-color: red;
+    }
 }
 
 .proyect-container b-card-text {
@@ -117,12 +132,12 @@ export default {
     padding-bottom: 1rem;
 }
 
-.text{
+.text {
     color: aliceblue;
 }
 
 .proyect-container b-button {
-    background-color: aqua;
+    background-color: rgb(65, 55, 201);
     margin: 0 auto;
     padding-top: 0.3rem;
     padding-bottom: 0.3rem;
@@ -131,11 +146,36 @@ export default {
     border-radius: 2rem;
     gap: 0.75rem;
 }
+
+.modal {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background-color: white;
+  color: #232338;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.95);
+  transition: all 0.3s ease;
+  z-index: 100;
+  width: 250px;
+}
+
+/* Mostrar el modal cuando el mouse esté sobre trigger o modal */
+.proyect-container b-card:hover .modal{
+      opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
 @keyframes zoomIn {
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 @media (max-width:768px) {

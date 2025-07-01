@@ -20,10 +20,11 @@
             <div id="projects-container">
                 <div class="projects-header">
                     <h2>Proyectos</h2>
-                    <div class="line">
+                    <div class="line" id="line">
                     </div>
                 </div>
             </div>
+            
             <div >
                 <CardProyectComponent/>
             </div>
@@ -33,7 +34,7 @@
     </main>
     <div class="proyect-content">
         <section>
-            <TimeLineComponent/>
+            <TimeLineComponent id="education"/>
             <!--<EducationComponent v-for="n in 2" :key="n" class="education"/>-->
             
         </section>
@@ -274,7 +275,25 @@ main .title {
 .projects-header .line {
     flex-grow: 1;
     height: 2px;
-    background-color: var(--color-text);
+    animation: rgbBorder 1s linear infinite;
+}
+/*animation: rgbBorder 1s linear infinite;*/
+@keyframes rgbBorder {
+    0% {
+        background-color: red;
+    }
+
+    33% {
+        background-color: lime;
+    }
+
+    66% {
+        background-color: blue;
+    }
+
+    100% {
+        background-color: red;
+    }
 }
 
 #skillsContainer {

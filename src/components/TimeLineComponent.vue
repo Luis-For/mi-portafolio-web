@@ -14,7 +14,7 @@
                 <h3>Ingenieria de sistemas</h3>
                 <p>Pregrado - Universidad del Magdalena</p>
                 <div class="state">
-                    <h4>EN CURSO</h4>
+                    <button class="trigger" onclick="openModal()"><h4>EN CURSO</h4></button>
                 </div>
             </div>
             <div class="timeline-component timeline-content">
@@ -24,9 +24,12 @@
                     <h4>EN CURSO</h4>
                 </div>
             </div>
+            
             <div class="timeline-middle">
                 <div class="timeline-circle"></div>
             </div>
+            
+            <!--
             <div class="timeline-empty">
             </div>
 
@@ -41,12 +44,18 @@
                 <p>Some Text.</p>
             </div>
             <div class="timeline-empty">
-            </div>            
+            </div>     -->       
             
         </div>
     </section>
 </div>
 </template>
+
+<script>
+export default{
+  name:'TimeLineComponent'
+}
+</script>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap');

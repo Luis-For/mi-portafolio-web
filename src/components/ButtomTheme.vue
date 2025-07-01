@@ -25,9 +25,11 @@ const applyTheme = (theme) => {
   if(currentTheme.value=='light'){
     document.documentElement.style.setProperty('--color-text','black');
     document.documentElement.style.setProperty('--navbar-color-text','black');
+    document.documentElement.style.setProperty('--footer-color','#878DF0');
   }else{
     document.documentElement.style.setProperty('--color-text','white');
     document.documentElement.style.setProperty('--navbar-color-text','white');
+    document.documentElement.style.setProperty('--footer-color','#0F1125'); //#0F1125 #000000
   }
 };
 

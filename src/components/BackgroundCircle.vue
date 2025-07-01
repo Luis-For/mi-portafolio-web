@@ -22,12 +22,18 @@
             <li v-for="n in 1" :key="n"></li>
         </ul>
     </div>
+    <BackgroundStars/>
 </div>
 </template>
 
 <script>
+import BackgroundStars from './BackgroundStars.vue';
+
 export default {
-    name: 'Circle'
+    name: 'Circle',
+    components:{
+        BackgroundStars
+    }
 }
 </script>
 

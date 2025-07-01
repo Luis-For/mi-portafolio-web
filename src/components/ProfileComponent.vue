@@ -35,7 +35,7 @@ export default {
     name: 'ProfileView',
     methods: {
         downloadCV() {
-            const cvUrl = '../assets/docs/Luis Angel Fornaris Rodriguez - Full Stack Developer.pdf';
+            const cvUrl = 'src/assets/docs/Luis Angel Fornaris Rodriguez - Full Stack Developer.pdf';
 
             // Crear un enlace temporal
             const link = document.createElement('a');
@@ -81,11 +81,14 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
 }
 
-.sidebar::hover{
-    background-color: #666;
+@keyframes rgbColor {
+  0%   { border-color: #191B2A; }
+  33%  { border-color: lime; }
+  66%  { border-color: blue; }
+  100% { border-color: red; }
 }
 
 .profile-pic {
@@ -220,6 +223,13 @@ export default {
 
     .main-content p {
         text-align: center;
+    }
+
+    .buttons{
+        display: flex;
+        gap: 15px;
+        margin-bottom: 30px;
+        justify-content: center;
     }
 }
 </style>

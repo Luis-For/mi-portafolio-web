@@ -52,7 +52,7 @@ export default {
         { id: "inicio", name: "Inicio" },
         { id: "servicios", name: "Servicios" },
         { id: "contacto", name: "Contacto" },
-        { id: "educación", name: "Educación" },
+        { id: "education", name: "Educación" },
         { id: "skillsContainer", name: "Habilidades" },
         { id: "projects-container", name: "Proyectos" }
       ],
