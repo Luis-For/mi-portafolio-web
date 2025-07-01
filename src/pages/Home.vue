@@ -313,18 +313,16 @@ main .title {
 }
 
 .habilidades {
-    flex: 1;
-    /* Cada elemento ocupa igual espacio */
-    min-width: 300px;
-    /* Ancho mínimo para responsividad */
+    flex: 1 1 auto; /* Permite que crezca y se reduzca según necesidad */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    min-width: 40%; /* Resetea el mínimo width para flex items */
+    max-width: 100%; /* Asegura que no exceda el ancho del contenedor padre */
     background: rgba(255, 255, 255, 0.1);
-    /* Fondo semitransparente */
     border-radius: 15px;
-    /* Bordes redondeados */
     padding: 1.5rem;
-    /* Espacio interno */
     backdrop-filter: blur(10px);
-    /* Efecto de desenfoque de fondo */
+    overflow: hidden; /* Contiene cualquier desbordamiento */
+    box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
 }
 
 /* Estilos responsivos */
@@ -341,8 +339,16 @@ main .title {
     }
 
     .habilidades {
-        max-width: max-content;
-        /* Ocupa todo el ancho en móviles */
+        flex: 1 1 auto; /* Permite que crezca y se reduzca según necesidad */
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+        min-width: 30%; /* Resetea el mínimo width para flex items */
+        max-width: 100%; /* Asegura que no exceda el ancho del contenedor padre */
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding: 1.5rem;
+        backdrop-filter: blur(10px);
+        overflow: hidden; /* Contiene cualquier desbordamiento */
+        box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
     }
 }
 

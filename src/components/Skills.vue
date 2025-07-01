@@ -67,6 +67,7 @@ export default {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 1rem;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    width: 90%;
     max-width: 500px;
     margin: 0 auto;
     transition: transform 0.3s ease, background-color 0.3s ease;
