@@ -1,7 +1,6 @@
 <template>
 <div id="home">
     <header>
-        <BackgroundCircle />
         <NavBar class="NavBar"/>
     </header>
 
@@ -42,17 +41,16 @@
     <footer>
         <FooterComponent class="endpage" />
     </footer>
+    <BackgroundCircle />
 </div>
 </template>
 
 <script>
 import BackgroundCircle from '../components/BackgroundCircle.vue';
 import CardProyectComponent from '../components/CardProyectComponent.vue';
-//import EducationComponent from '../components/EducationComponent.vue';
 import FooterComponent from '../components/FooterComponent.vue';
 import NavBar from '../components/NavBar.vue';
 import ProfileComponent from '../components/ProfileComponent.vue';
-//import ProjectsComponent from '../components/ProjectsComponent.vue';
 import Skills from '../components/Skills.vue';
 import TimeLineComponent from '../components/TimeLineComponent.vue';
 
@@ -63,8 +61,6 @@ export default {
         BackgroundCircle,
         ProfileComponent,
         Skills,
-        //ProjectsComponent,
-        //EducationComponent,
         TimeLineComponent,
         CardProyectComponent,
         FooterComponent
@@ -351,17 +347,4 @@ main .title {
         box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
     }
 }
-
-/*
-#skillsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start; /* Alinea los items al inicio verticalmente */
- /*   gap: 2rem;
-    padding: 1rem;
-    max-width: 1400px; /* Ajusta según necesites */
- /*   margin: 0 auto; /* Centra el contenedor horizontalmente */
-/*    width: 100%; /* Ocupa todo el ancho disponible */
-/*}*/
 </style>
