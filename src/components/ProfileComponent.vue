@@ -35,7 +35,8 @@ export default {
     name: 'ProfileView',
     methods: {
         downloadCV() {
-            const cvUrl = 'src/assets/docs/Luis Angel Fornaris Rodriguez - Full Stack Developer.pdf';
+            //const cvUrl = 'src\assets\docs\Luis Ángel Fornaris Rodríguez - Desarrollador Full Stack.pdf';
+            const cvUrl = '/docs/Luis Angel Fornaris Rodriguez - Desarrollador Full Stack.pdf';
 
             // Crear un enlace temporal
             const link = document.createElement('a');
