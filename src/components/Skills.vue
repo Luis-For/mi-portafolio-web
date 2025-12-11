@@ -14,7 +14,7 @@
                     </svg>
                 </div>
             </div>
-            <div class="skill-details">
+            <div class="skill-details" @mouseover="(e)=>e.target.style.color=skill.color" @mouseout="(e)=>e.target.style.color='#ffffff'">
                 <h4 class="skill-name">{{ skill.name }}</h4>
                 <p class="skill-description">Proyectos realizados: {{ skill.projects || 0 }}</p>
                 <div class="skill-bar">
@@ -57,7 +57,6 @@ export default {
         }
     }
 }
-//https://icons8.com/icon/rY6agKizO9eb/vue-js
 </script>
 
 <style>
@@ -94,7 +93,7 @@ export default {
 
 .skill-item:hover {
     transform: translateY(-2px);
-    background-color: rgba(255, 255, 255, 0.04);
+    background-color: rgba(83, 83, 83, 0.438);
 }
 
 .skill-icon-wrapper {
@@ -143,13 +142,10 @@ export default {
 }
 
 .skills-section:hover {
-    background-color: rgba(255, 0, 0, 0.1);
+    /*background-color: rgba(255, 255, 255, 0.467);*/
     transform: scale(1.02);
 }
 
 @media (max-width: 768px) {
-    .skills-section{
-    
-    }
 }
 </style>

@@ -35,8 +35,4 @@ export default{
     gap: 0.5rem;
     text-align: center;
 }
-
-
-
-
 </style>

@@ -7,9 +7,9 @@
     <main>
         <!-- Cambié <body> por <main> ya que body solo debe existir una vez en el HTML -->
         <ProfileComponent id="inicio" />
-        <h2 class="title">Habilidades</h2>
+        <h2 class="title" id="skills">Habilidades</h2>
         <div id="skillsContainer">
-            <Skills class="habilidades" title="Front" :skills="frontendSkills" />
+            <Skills class="habilidades" title="Front" :skills="frontendSkills" onclick="scrollToSkills"/>
             <Skills class="habilidades" title="Backend" :skills="backendSkills" />
             <Skills class="habilidades" title="Bases de datos" :skills="basesDeDatos" />
             <Skills class="habilidades" title="Herramientas y más" :skills="herramientas" />
@@ -31,6 +31,8 @@
 
         
     </main>
+    <ServicesComponent />
+    
     <div class="proyect-content">
         <section>
             <TimeLineComponent id="education"/>
@@ -38,6 +40,8 @@
             
         </section>
     </div>
+
+    <ContactComponent id="contacto"/>
     <footer>
         <FooterComponent class="endpage" />
     </footer>
@@ -53,6 +57,8 @@ import NavBar from '../components/NavBar.vue';
 import ProfileComponent from '../components/ProfileComponent.vue';
 import Skills from '../components/Skills.vue';
 import TimeLineComponent from '../components/TimeLineComponent.vue';
+import ServicesComponent from '../components/ServicesComponent.vue';
+import ContactComponent from '../components/ContactComponent.vue';
 
 export default {
     name: 'Home',
@@ -63,7 +69,9 @@ export default {
         Skills,
         TimeLineComponent,
         CardProyectComponent,
-        FooterComponent
+        FooterComponent,
+        ServicesComponent,
+        ContactComponent
     },
     data() {
         return {
@@ -210,6 +218,14 @@ export default {
                 title:'Ingeneria de sistemas',
 
             }]
+        }
+    },
+    methods: {
+        scrollToSkills() {
+            const skillsContainer = document.getElementById('skills');
+            if (skillsContainer) {
+                skillsContainer.scrollIntoView({ behavior: 'smooth' });
+            }
         }
     }
 }

@@ -13,23 +13,29 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, defineEmits } from 'vue';
+import Home from '../pages/Home.vue';
 
 const currentTheme = ref('light');
+const emitter = defineEmits('theme-changed');
+//const emit = defineEmits(['theme-changed']);
 
 const applyTheme = (theme) => {
   currentTheme.value = theme;
   document.documentElement.setAttribute('data-theme', theme);
   localStorage.setItem('theme', theme);
+  emitter('theme-changed', theme);
 
   if(currentTheme.value=='light'){
     document.documentElement.style.setProperty('--color-text','black');
     document.documentElement.style.setProperty('--navbar-color-text','black');
     document.documentElement.style.setProperty('--footer-color','#878DF0');
+    
   }else{
     document.documentElement.style.setProperty('--color-text','white');
     document.documentElement.style.setProperty('--navbar-color-text','white');
     document.documentElement.style.setProperty('--footer-color','#0F1125'); //#0F1125 #000000
+    Home.methods.cambioDelogo('dark');
   }
 };
 

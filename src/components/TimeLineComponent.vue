@@ -13,8 +13,8 @@
             <div class="timeline-component timeline-content">
                 <h3>Ingenieria de sistemas</h3>
                 <p>Pregrado - Universidad del Magdalena</p>
-                <div class="state">
-                    <button class="trigger" onclick="openModal()"><h4>EN CURSO</h4></button>
+                <div class="state" @click="openInfo" @mouseover="zoom($event.target)" @mouseout="norm($event.target)">
+                    <p1 class="trigger">Ver más</p1>
                 </div>
             </div>
             <div class="timeline-component timeline-content">
@@ -27,33 +27,62 @@
             
             <div class="timeline-middle">
                 <div class="timeline-circle"></div>
-            </div>
-            
-            <!--
-            <div class="timeline-empty">
-            </div>
-
-            <div class="timeline-empty">
-            </div>
-
-            <div class="timeline-middle">
-                <div class="timeline-circle"></div>
-            </div>
-            <div class=" timeline-component timeline-content">
-                <h3>Javascript</h3>
-                <p>Some Text.</p>
-            </div>
-            <div class="timeline-empty">
-            </div>     -->       
-            
+            </div>  
         </div>
     </section>
+    <ModalBase v-if="visible" id="visible" @cerrar="cerrar">
+        <h1>cerrar</h1>
+    </ModalBase>
 </div>
 </template>
 
 <script>
-export default{
-  name:'TimeLineComponent'
+  import ModalBase from './ModalBase.vue';
+  import { utils } from '../utils/Utils.js';
+
+  export default{
+    name:'TimeLineComponent', 
+
+    components:{
+      ModalBase
+    },
+
+    data() {
+        return {
+            visible: false,
+            dataEducation:[
+              {
+                id:1,
+                title: 'Ingenieria de sistemas',
+                desription: 'Pregrado - Universidad del Magdalena',
+                image: '../assets/image/education/unimagdalena.png',
+                info: 'Estudios de ingenieria de sistemas en la Universidad del Magdalena, con conocimientos en desarrollo web, bases de datos, redes y seguridad informática. Participación en proyectos académicos y actividades extracurriculares relacionadas con la tecnología.',
+              },{
+                id:2,
+                title: 'Ingenieria de sistemas',
+                desription: 'Pregrado - Universidad del Magdalena',
+                image: '../assets/image/education/unimagdalena.png',
+                info: 'Estudios de ingenieria de sistemas en la Universidad del Magdalena, con conocimientos en desarrollo web, bases de datos, redes y seguridad informática. Participación en proyectos académicos y actividades extracurriculares relacionadas con la tecnología.',
+              }
+            ]
+        }
+    },
+
+    methods:{
+      openInfo(){
+        this.visible=true;
+        //document.body.style.overflow = "hidden";
+      },
+      cerrar(){
+        this.visible=false;
+        document.body.style.overflow = "auto";
+    }
+  },
+  mounted() { 
+    const { zoom, norm } = utils();
+    this.zoom = zoom;
+    this.norm = norm;
+  }
 }
 </script>
 

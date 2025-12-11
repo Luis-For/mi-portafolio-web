@@ -171,8 +171,8 @@ body {
     left: 50%;
     width: 25px;
     height: 25px;
-    animation-delay: 15s;
-    animation-duration: 45s;
+    animation-delay: 11s;
+    animation-duration: 11s;
 }
 
 .circles li:nth-child(9) {
@@ -180,7 +180,7 @@ body {
     width: 15px;
     height: 15px;
     animation-delay: 2s;
-    animation-duration: 35s;
+    animation-duration: 14s;
 }
 
 .circles li:nth-child(10) {
@@ -188,7 +188,7 @@ body {
     width: 150px;
     height: 150px;
     animation-delay: 0s;
-    animation-duration: 11s;
+    animation-duration: 9s;
 }
 
 .circles li:nth-child(11) {
@@ -196,7 +196,7 @@ body {
     width: 150px;
     height: 150px;
     animation-delay: 0s;
-    animation-duration: 15s;
+    animation-duration: 6s;
 }
 
 .circles li:nth-child(12) {
@@ -212,23 +212,23 @@ body {
     width: 20px;
     height: 20px;
     animation-delay: 2s;
-    animation-duration: 12s;
+    animation-duration: 7s;
 }
 
 .circles li:nth-child(14) {
     left: 70%;
     width: 20px;
     height: 20px;
-    animation-delay: 2s;
-    animation-duration: 12s;
+    animation-delay: 1s;
+    animation-duration: 18s;
 }
 
 .circles li:nth-child(15) {
     left: 43%;
     width: 150px;
     height: 150px;
-    animation-delay: 0s;
-    animation-duration: 13s;
+    animation-delay: 1s;
+    animation-duration: 8s;
 }
 
 @keyframes animate {

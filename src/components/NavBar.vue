@@ -1,8 +1,8 @@
 <template>
   <nav class="navbar">
     <!-- Logo o nombre del sitio (opcional) -->
-    <div class="navbar-brand">
-        <img src="../assets/image/Systems_and_technology_programming_company_logo-removebg-preview.png" width="150"/>
+    <div class="navbar-brand" id="icon" v-on:mouseover="zoom()" v-on:mouseout="norm()">
+        <img id="logo" src="../assets/image/Systems_and_technology_programming_company_logo-removebg-preview.png" width="150" @change="cambioDelogo"/>
     </div>
     
     <!-- Botón hamburguesa (solo móvil) -->
@@ -33,7 +33,7 @@
         </a>
       </li>
       <li>
-        <ButtomTheme />
+        <ButtomTheme @theme-changed="cambioDelogo"/>
       </li>
     </ul>
   </nav>
@@ -41,6 +41,10 @@
 
 <script>
 import ButtomTheme from './ButtomTheme.vue';
+import logoLight from "@/assets/image/Systems_and_technology_programming_company_logo-removebg-preview.png";
+import logoDark from "@/assets/image/logo_white.png";
+
+//const logoSrc = ref(logoLight);
 
 export default {
   components: {
@@ -84,7 +88,31 @@ export default {
     onLeave() {
       this.hoveredSection = null;
     },
-  },
+    zoom() {
+      const icon = document.getElementById('icon');
+      if (icon) {
+        icon.style.transition = "transform 0.2s ease";
+        icon.style.transform = 'scale(1.2)';
+      }
+    },
+    norm(){
+      const icon = document.getElementById('icon');
+      if (icon) {
+        icon.style.transition = "transform 0.1s ease";
+        icon.style.transform = 'scale(1)';
+      }
+    },
+    cambioDelogo(theme) {
+      const logo = document.getElementById('logo');
+      if (logo) {
+        if (theme === 'dark') {
+          logo.src = logoDark;
+        } else {
+          logo.src = logoLight;
+        }
+      }
+    }
+  }
 };
 </script>
 

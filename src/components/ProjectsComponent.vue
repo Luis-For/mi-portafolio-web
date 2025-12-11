@@ -10,8 +10,6 @@
         <a :href="project.url" target="_blank" rel="noopener noreferrer" class="code-button">
           Ver código
         </a>
-        <!-- Puedes agregar más íconos aquí -->
-        <!-- <button disabled class="disabled-icon">Otro</button> -->
       </div>
     </div>
   </div>
