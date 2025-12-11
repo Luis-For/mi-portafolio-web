@@ -192,7 +192,7 @@ export default {
     display: flex;
     gap: 15px;
     margin-bottom: 30px;
-    justify-content: baseline;
+    justify-content: flex-start;
 }
 
 .btn-primary {

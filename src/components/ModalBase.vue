@@ -1,5 +1,5 @@
 <template>
-  <div v-if="card" class="flotante">
+  <div v-if="card" class="flotante" id="modal">
     <img class="close" src="https://img.icons8.com/?size=100&id=13903&format=png&color=CC5DE8" @click="cerrar">
     <div class="content-modal">
       <img :src="card.linkImg" />
@@ -17,11 +17,7 @@
 <script>
   document.addEventListener("DOMContentLoaded", () => {
   console.log("Página abierta correctamente");
-  /*document.body.style.filter = "(80%)";
-  document.body.style.transition = "filter 0.5s ease-in-out";
-  document.body.style.opacity = "0.8";*/
-});
-
+  });
 
 export default {
   name: "ModalBase",
@@ -33,8 +29,25 @@ export default {
     },
     filter() {
       document.body.style.filter = "none";
+    },
+    handleClickOutside() {
+      const modal = document.getElementById("modal");
+      document.addEventListener("click", (event)=>{
+        if(!modal.contains(event.target)){
+          this.cerrar();
+        }
+      });
     }
+
   },
+    mounted() {
+    document.addEventListener("click", this.handleClickOutside);
+  },
+
+  beforeUnmount() {
+    document.removeEventListener("click", this.handleClickOutside);
+  },
+
   props:{
     card: {
       type: Object,

@@ -1,6 +1,6 @@
 <template class="services">
-    <div class="service">
-        <img :src="image" :alt="descriptionImg" class="service-image"/>
+    <div class="service" v-for="service in services" :key="service.title">
+        <img :src="service.image" :alt="service.descriptionImg" class="service-image"/>
         <h1>{{ title }}</h1>
         <p>{{ description }}</p>
         <button id="button">{{ buttonText }}</button>
@@ -16,17 +16,47 @@ export default{
         image: String,
         descriptionImg: String,
         buttonText: String
+    },
+    data(){
+        return{
+            services:[
+              {
+                title: 'Desarrollo Web',
+                description: 'Creación de sitios web modernos y responsivos.',
+                descriptionImg: 'Ícono de desarrollo web',
+                buttonText: 'Saber más'
+              },
+              {
+                title: 'Diseño Gráfico',
+                description: 'Diseños atractivos para mejorar la presencia en línea.',
+                descriptionImg: 'Ícono de diseño gráfico',
+                buttonText: 'Saber más'
+              },
+              {
+                title: 'SEO',
+                description: 'Optimización para motores de búsqueda para aumentar la visibilidad.',
+                descriptionImg: 'Ícono de SEO',
+                buttonText: 'Saber más'
+              }
+            ]
+        }
     }
 }
 </script>
 
 <style>
+  .services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .service {
   position: relative;
-  width: 100px; /* Ancho del hexágono */
-  height: 57.7px; /* Aproximadamente (sqrt(3)/2) * ancho */
+  width: 300px; /* Ancho del hexágono */
+  height: 259.8px; /* Aproximadamente (sqrt(3)/2) * ancho */
   background-color: #3498db; /* Color del hexágono */
-  margin: 28.85px 0; /* Ajusta para teselar */
+  margin: 129.9px 0; /* Ajusta para teselar */
 }
 .service::before,
 .service::after {

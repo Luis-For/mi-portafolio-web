@@ -30,11 +30,13 @@ const applyTheme = (theme) => {
     document.documentElement.style.setProperty('--color-text','black');
     document.documentElement.style.setProperty('--navbar-color-text','black');
     document.documentElement.style.setProperty('--footer-color','#878DF0');
+    document.documentElement.style.setProperty('--background-color-contact','rgba(91, 39, 245, 0.5)'); //rgba(42, 42, 74, 1)
     
   }else{
     document.documentElement.style.setProperty('--color-text','white');
     document.documentElement.style.setProperty('--navbar-color-text','white');
     document.documentElement.style.setProperty('--footer-color','#0F1125'); //#0F1125 #000000
+    document.documentElement.style.setProperty('--background-color-contact','rgba(42, 42, 74, 1)');
     Home.methods.cambioDelogo('dark');
   }
 };

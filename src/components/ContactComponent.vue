@@ -20,12 +20,13 @@ export default {
 
 <style>
     .contact-container {
-        background-color: rgba(42, 42, 74, 1);
+        /*background-color: rgba(42, 42, 74, 1);*/
+        background: var(--background-color-contact);
         padding: 2rem;
         border-radius: 10px;
         color: white;
         text-align: center;
-        
+        overflow: hidden;
     }
     .contact-container ul {
         display: flex;
@@ -41,5 +42,11 @@ export default {
         margin: 0 1rem;
         display: flex;
         justify-content: center;
+    }
+
+    @media (max-width:768px) {
+        .contact-container {
+            
+        }
     }
 </style>
