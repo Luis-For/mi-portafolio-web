@@ -7,8 +7,12 @@
         <div class="social-icons">
             <!--<a href="#"><i class="fab fa-facebook-f"></i></a>-->
             <!--<a href="#"><i class="fab fa-twitter"></i></a>-->
-            <a href="#"><i class="fab fa-linkedin-in"></i><img src="https://img.icons8.com/?size=60&id=13930&format=png&color=000000" /></a>
-            <a href="#"><i class="fab fa-instagram"><img src="https://img.icons8.com/?size=60&id=62856&format=png&color=000000" alt=""></i></a>
+            <!--@click="()=>window.open('https://www.linkedin.com/in/luis-angel-fornaris-rodriguez-1a0a4b1b7/', 'new tab' )"-->
+            <a href="https://www.linkedin.com/in/luis-%C3%A1ngel-fornaris-rodr%C3%ADguez-2146561a2/" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+                <img src="https://img.icons8.com/?size=60&id=13930&format=png&color=000000"/>
+            </a>
+            <a href="https://github.com/Luis-For" target="_blank"><i class="fab fa-instagram"><img src="https://img.icons8.com/?size=60&id=62856&format=png&color=000000" alt="" ></i></a>
         </div>
     </div>
     <div class="main-content">
@@ -62,6 +66,7 @@ export default {
             const gitUrl='https://github.com/Luis-For';
              //window.location.href=gitUrl;
              window.open(gitUrl, 'new tab')
+             //@click="()=>window.open('https://www.linkedin.com/in/luis-angel-fornaris-rodriguez-1a0a4b1b7/', 'new tab')"
         },
 
         zoom() {},
