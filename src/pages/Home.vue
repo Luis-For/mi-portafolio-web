@@ -99,23 +99,11 @@ export default {
                 projects: '2',
                 image: 'https://img.icons8.com/?size=40&id=71257&format=png&color=000000'
             },{
-                name: 'JavaScript',
-                color: 'yellow',
-                level: '68',
-                projects: '2',
-                image: 'https://img.icons8.com/?size=40&id=108784&format=png&color=000000'
-            },{
-                name:'HTML',
+                name:'HTML5',
                 color:'orange',
                 level:'80',
                 projects:'5',
                 image:'https://img.icons8.com/?size=40&id=20909&format=png&color=000000'
-            },{
-                name:'Css',
-                color:'blue',
-                level:'60',
-                projects:'5',
-                image:'https://img.icons8.com/?size=40&id=21278&format=png&color=000000'
             }],
 
             backendSkills: [{
@@ -138,25 +126,12 @@ export default {
                 level: '85',
                 projects: '5',
                 image: 'https://img.icons8.com/?size=40&id=hsPbhkOH4FMe&format=png&color=000000'
-            },
-            {
-                name: 'Express.js',
-                color: 'white',
-                level: '85',
-                projects: '5',
-                image: 'https://img.icons8.com/?size=35&id=kg46nzoJrmTR&format=png&color=FFFFFF'
             },{
                 name:'C#',
                 color:'#058F92',
                 level:'90',
                 projects:'4',
                 image:'https://img.icons8.com/?size=40&id=55205&format=png&color=9D0DC9'
-            },{
-                name:'.NET',
-                color:'#058F92',
-                level:'90',
-                projects:'4',
-                image:'https://img.icons8.com/?size=40&id=1BC75jFEBED6&format=png&color=6A1B9A'
             }],
             basesDeDatos: [{
                 name: 'Postgres',
@@ -195,18 +170,6 @@ export default {
                 level:'65',
                 projects:'2',
                 image:'https://img.icons8.com/?size=40&id=33039&format=png&color=000000'
-            },{
-                name:'Azure',
-                color:'blue',
-                level:'68',
-                projects:'2',
-                image:'https://img.icons8.com/?size=40&id=VLKafOkk3sBX&format=png&color=000000'
-            },{
-                name:'Firebase',
-                color:'orange, yellow',
-                level:'40',
-                projects:'1',
-                image:'https://img.icons8.com/?size=40&id=62452&format=png&color=000000'
             }],
             //
             project: [{
@@ -353,7 +316,7 @@ main .title {
     max-width: 100%; /* Asegura que no exceda el ancho del contenedor padre */
     background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
-    padding: 1.5rem;
+    padding: 1rem;
     backdrop-filter: blur(10px);
     overflow: hidden; /* Contiene cualquier desbordamiento */
     box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
@@ -362,7 +325,7 @@ main .title {
 /* Estilos responsivos */
 @media (max-width: 768px) {
     #inicio {
-        padding: 25%;
+        padding: 10%;
     }
 
     #skillsContainer {
@@ -370,6 +333,8 @@ main .title {
         flex-wrap: wrap;
         justify-content: center;
         align-items: flex-start;
+        overflow: hidden;
+        width: auto ;
     }
 
     .habilidades {

@@ -5,7 +5,6 @@
         <div v-for="(skill, index) in skills" :key="index" class="skill-item">
             <div class="skill-icon-wrapper" :style="{ backgroundColor: `rgba(${hexToRgb(skill.color)}, 0.125)` }">
                 <div :style="{ color: skill.color }">
-                    <!-- Puedes reemplazar esto con un componente de icono dinámico -->
 
                     <img v-if="skill.image" :src="skill.image" :alt="skill.name" class="w-6 h-6 object-contain" />
 
@@ -16,7 +15,7 @@
             </div>
             <div class="skill-details" @mouseover="(e)=>e.target.style.color=skill.color" @mouseout="(e)=>e.target.style.color='#ffffff'">
                 <h4 class="skill-name">{{ skill.name }}</h4>
-                <p class="skill-description">Proyectos realizados: {{ skill.projects || 0 }}</p>
+                <!--<p class="skill-description">Proyectos realizados: {{ skill.projects || 0 }}</p>-->
                 <div class="skill-bar">
                     <div class="skill-bar-fill" :style="{
                 width: `${skill.level}%`, 
@@ -147,5 +146,8 @@ export default {
 }
 
 @media (max-width: 768px) {
+    .skills-section {
+        width: 100%;
+    }
 }
 </style>

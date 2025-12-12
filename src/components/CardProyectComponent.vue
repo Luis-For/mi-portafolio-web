@@ -132,7 +132,6 @@ export default {
 .proyect-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* 4 columnas iguales */
     gap: 3rem;
     padding-left: 3rem;
     padding-right: 3rem;
@@ -146,8 +145,6 @@ export default {
   flex-direction: column;
   overflow: hidden; 
 }
-
-
 
 .image img {
     width: 100%;
@@ -165,7 +162,7 @@ export default {
 .proyect-container b-card {
     background-color: #232338;
     padding: 2rem;
-    border: 2px solid rgb(255, 255, 255);
+    border: 1px solid rgb(67, 67, 67);
     border-radius: 1rem;
     transition: transform 0.3s ease, background-color 0.3s ease;
     cursor: pointer;
@@ -208,6 +205,10 @@ export default {
 
 .text {
     color: aliceblue;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 .proyect-container b-button {
