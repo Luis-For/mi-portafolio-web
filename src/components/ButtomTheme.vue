@@ -18,7 +18,6 @@ import Home from '../pages/Home.vue';
 
 const currentTheme = ref('light');
 const emitter = defineEmits('theme-changed');
-//const emit = defineEmits(['theme-changed']);
 
 const applyTheme = (theme) => {
   currentTheme.value = theme;

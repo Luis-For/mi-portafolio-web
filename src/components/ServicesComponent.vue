@@ -1,9 +1,8 @@
 <template class="services">
     <div class="service" v-for="service in services" :key="service.title">
         <img :src="service.image" :alt="service.descriptionImg" class="service-image"/>
-        <h1>{{ title }}</h1>
-        <p>{{ description }}</p>
-        <button id="button">{{ buttonText }}</button>
+        <h1>{{ service.title }}</h1>
+        <!--<button id="button">{{ buttonText }}</button>-->
     </div>
 </template>
 
@@ -12,43 +11,31 @@ export default{
     name:'ServicesComponent',
     props:{
         title:String,
-        description: String,
         image: String,
-        descriptionImg: String,
         buttonText: String
     },
     data(){
         return{
             services:[
               {
-                title: 'Desarrollo Web',
-                description: 'Creación de sitios web modernos y responsivos.',
-                descriptionImg: 'Ícono de desarrollo web',
-                buttonText: 'Saber más'
+                title: 'Desarrollo de aplicaciones Web',
+                image: 'https://img.icons8.com/?size=100&id=117011&format=png&color=000000'
               },
               {
                 title: 'Diseño Gráfico',
-                description: 'Diseños atractivos para mejorar la presencia en línea.',
-                descriptionImg: 'Ícono de diseño gráfico',
-                buttonText: 'Saber más'
+                image: 'https://img.icons8.com/?size=100&id=bt8WwOf6kj0n&format=png&color=000000'
               },
               {
                 title: 'SEO',
-                description: 'Optimización para motores de búsqueda para aumentar la visibilidad.',
-                descriptionImg: 'Ícono de SEO',
-                buttonText: 'Saber más'
+                image: 'https://img.icons8.com/?size=100&id=tFjGFz05Kprj&format=png&color=000000'
               },
               {
                 title: 'Marketing Digital',
-                description: 'Estrategias de marketing para impulsar tu negocio en línea.',
-                descriptionImg: 'Ícono de marketing digital',
-                buttonText: 'Saber más'
+                image: 'https://img.icons8.com/?size=100&id=xaquNfre75yC&format=png&color=000000'
               },
               {
                 title: 'Consultoría Tecnológica',
-                description: 'Asesoramiento experto para soluciones tecnológicas efectivas.',
-                descriptionImg: 'Ícono de consultoría tecnológica',
-                buttonText: 'Saber más'
+                image: 'https://img.icons8.com/?size=100&id=zV2k3jcJZiPb&format=png&color=000000'
               }
             ]
         }
@@ -67,6 +54,7 @@ export default{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     margin: 1rem;
+    color: var(--color-text);
   }
 
   .service{
