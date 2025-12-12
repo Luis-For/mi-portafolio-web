@@ -54,11 +54,11 @@ export default {
     return {
       sections: [
         { id: "inicio", name: "Inicio" },
-        { id: "servicios", name: "Servicios" },
-        { id: "contacto", name: "Contacto" },
+        { id: "skills", name: "Habilidades" },
+        { id: "servicesComponent", name: "Servicios" },
+        { id: "projects-container", name: "Proyectos" },
         { id: "education", name: "Educación" },
-        { id: "skillsContainer", name: "Habilidades" },
-        { id: "projects-container", name: "Proyectos" }
+        { id: "contacto", name: "Contacto" }
       ],
       hoveredSection: null,
       menuOpen: false,
@@ -77,8 +77,13 @@ export default {
       }
       const section = document.getElementById(id);
       if (section) {
-        section.scrollIntoView({
-          behavior: "smooth"
+        const offset = -80; // por ejemplo, restar 80px (como un header pegado)
+
+        const sectionTop = section.getBoundingClientRect().top + window.pageYOffset;
+
+        window.scrollTo({
+          top: sectionTop + offset,
+          behavior: 'smooth'
         });
       }
     },

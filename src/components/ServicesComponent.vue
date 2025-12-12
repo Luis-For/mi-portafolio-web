@@ -37,6 +37,18 @@ export default{
                 description: 'Optimización para motores de búsqueda para aumentar la visibilidad.',
                 descriptionImg: 'Ícono de SEO',
                 buttonText: 'Saber más'
+              },
+              {
+                title: 'Marketing Digital',
+                description: 'Estrategias de marketing para impulsar tu negocio en línea.',
+                descriptionImg: 'Ícono de marketing digital',
+                buttonText: 'Saber más'
+              },
+              {
+                title: 'Consultoría Tecnológica',
+                description: 'Asesoramiento experto para soluciones tecnológicas efectivas.',
+                descriptionImg: 'Ícono de consultoría tecnológica',
+                buttonText: 'Saber más'
               }
             ]
         }
@@ -45,53 +57,20 @@ export default{
 </script>
 
 <style>
-  .services {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.service {
-  position: relative;
-  width: 300px; /* Ancho del hexágono */
-  height: 259.8px; /* Aproximadamente (sqrt(3)/2) * ancho */
-  background-color: #3498db; /* Color del hexágono */
-  margin: 129.9px 0; /* Ajusta para teselar */
-}
-.service::before,
-.service::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  border-left: 50px solid transparent; /* Mitad del ancho */
-  border-right: 50px solid transparent; /* Mitad del ancho */
-  left: 0;
-}
-
-.service::before {
-  bottom: 100%;
-  border-bottom: 28.85px solid #3498db; /* Altura de la punta */
-}
-
-.service::after {
-  top: 100%;
-  border-top: 28.85px solid #3498db; /* Altura de la punta */
-}
-.service-image {
-    width: 100%;
-    height: auto;
+  .service {
+    position: relative;
+    /*width: 300px;*/
+    background-color: var(--card-color);
     border-radius: 10px;
-}
-#button {
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 5px;
-    background-color: #6c63ff;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-#button:hover {
-    background-color: #574fd6;
-}
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin: 1rem;
+  }
+
+  .service{
+    width: 300px;
+  }
+
 </style>

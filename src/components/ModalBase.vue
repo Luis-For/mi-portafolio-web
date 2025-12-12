@@ -30,6 +30,7 @@ export default {
     filter() {
       document.body.style.filter = "none";
     },
+    /*cerrar si se presiona click afuera */
     handleClickOutside() {
       const modal = document.getElementById("modal");
       document.addEventListener("click", (event)=>{

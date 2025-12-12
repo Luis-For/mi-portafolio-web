@@ -29,14 +29,15 @@ export default {
         overflow: hidden;
     }
     .contact-container ul {
-        display: flex;
-        justify-content: center; /* Centra horizontalmente */
-        align-items: center; /* Centra verticalmente si es necesario */
+        display: relative;
+        justify-content: flex-start; /* Centra horizontalmente */
+        align-items: flex-start; /* Centra verticalmente si es necesario */
         list-style-type: none;
-        padding: 0;
+        padding: 2px;
     }
     ul{
         margin-top: 1rem;
+        align-items: flex-start;
     }
     li{
         margin: 0 1rem;
@@ -46,7 +47,11 @@ export default {
 
     @media (max-width:768px) {
         .contact-container {
-            
+            padding: 2rem;
+            font-size: 10px;
+            position: flex;
+            flex-direction: column(2,2);
+            overflow: hidden;
         }
     }
 </style>

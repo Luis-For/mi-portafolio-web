@@ -5,14 +5,15 @@
     </header>
 
     <main>
-        <!-- Cambié <body> por <main> ya que body solo debe existir una vez en el HTML -->
         <ProfileComponent id="inicio" />
-        <h2 class="title" id="skills">Habilidades</h2>
-        <div id="skillsContainer">
-            <Skills class="habilidades" title="Front" :skills="frontendSkills" onclick="scrollToSkills"/>
-            <Skills class="habilidades" title="Backend" :skills="backendSkills" />
-            <Skills class="habilidades" title="Bases de datos" :skills="basesDeDatos" />
-            <Skills class="habilidades" title="Herramientas y más" :skills="herramientas" />
+        <div id="skills">
+            <h2 class="title">Habilidades</h2>
+            <div id="skillsContainer">
+                <Skills class="habilidades" title="Front" :skills="frontendSkills" onclick="scrollToSkills"/>
+                <Skills class="habilidades" title="Backend" :skills="backendSkills" />
+                <Skills class="habilidades" title="Bases de datos" :skills="basesDeDatos" />
+                <Skills class="habilidades" title="Herramientas y más" :skills="herramientas" />
+            </div>
         </div>
 
         <section>
@@ -31,13 +32,17 @@
 
         
     </main>
-    <ServicesComponent />
+    <div class="services-component" id="servicesComponent">
+        <h1 class="services-title">Servicios</h1>
+        <div class="services">
+            <ServicesComponent/>
+        </div>
+    </div>
     
-    <div class="proyect-content">
+    <div class="proyect-content" id="education">
         <section>
-            <TimeLineComponent id="education"/>
+            <TimeLineComponent/>
             <!--<EducationComponent v-for="n in 2" :key="n" class="education"/>-->
-            
         </section>
     </div>
 
@@ -322,6 +327,23 @@ main .title {
     margin: 0 auto; 
     width: 50%;
     /* Centrar el contenedor */
+}
+
+.services-title{
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--color-text);
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.services {
+    background-color: var(--card-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 2rem 2rem 2rem;
 }
 
 .habilidades {
