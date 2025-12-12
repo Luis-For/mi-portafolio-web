@@ -1,5 +1,5 @@
 <template class="services">
-    <div class="service" v-for="service in services" :key="service.title">
+    <div class="service" v-for="service in services" :key="service.title" @mouseover="zoomss($event.target)" @mouseout="normss($event.target)">
         <img :src="service.image" :alt="service.descriptionImg" class="service-image"/>
         <h1>{{ service.title }}</h1>
         <!--<button id="button">{{ buttonText }}</button>-->
@@ -7,6 +7,7 @@
 </template>
 
 <script>
+
 export default{
     name:'ServicesComponent',
     props:{
@@ -39,6 +40,14 @@ export default{
               }
             ]
         }
+    },
+    methods:{
+      zoomss(e){
+        e.style.transform = 'scale(1.1)';
+      },
+      normss(e){
+        e.style.transform = 'scale(1)';
+      }
     }
 }
 </script>

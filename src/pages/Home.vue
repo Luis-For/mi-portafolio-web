@@ -1,12 +1,17 @@
 <template>
 <div id="home">
+    <div class="background-app">
+        <ParticlesBackground/>
+    </div>
     <header>
         <NavBar class="NavBar"/>
     </header>
 
     <main>
-        <ProfileComponent id="inicio" />
-        <div id="skills">
+        <div>
+            <ProfileComponent id="inicio" class="fade-in"/>
+        </div>
+        <div id="skills" class="face-in">
             <h2 class="title">Habilidades</h2>
             <div id="skillsContainer">
                 <Skills class="habilidades" title="Front" :skills="frontendSkills" onclick="scrollToSkills"/>
@@ -17,7 +22,7 @@
         </div>
 
         <section>
-            <div id="projects-container">
+            <div id="projects-container" class="face-in">
                 <div class="projects-header">
                     <h2>Proyectos</h2>
                     <div class="line" id="line">
@@ -25,12 +30,10 @@
                 </div>
             </div>
             
-            <div >
+            <div class="fade-in">
                 <CardProyectComponent/>
             </div>
         </section>
-
-        
     </main>
     <div class="services-component" id="servicesComponent">
         <h1 class="services-title">Servicios</h1>
@@ -42,20 +45,19 @@
     <div class="proyect-content" id="education">
         <section>
             <TimeLineComponent/>
-            <!--<EducationComponent v-for="n in 2" :key="n" class="education"/>-->
         </section>
     </div>
-
-    <ContactComponent id="contacto"/>
+    <div>
+        <ContactComponent id="contacto"/>
+        <FormComponent/>
+    </div>
     <footer>
         <FooterComponent class="endpage" />
     </footer>
-    <BackgroundCircle />
 </div>
 </template>
 
 <script>
-import BackgroundCircle from '../components/BackgroundCircle.vue';
 import CardProyectComponent from '../components/CardProyectComponent.vue';
 import FooterComponent from '../components/FooterComponent.vue';
 import NavBar from '../components/NavBar.vue';
@@ -64,19 +66,22 @@ import Skills from '../components/Skills.vue';
 import TimeLineComponent from '../components/TimeLineComponent.vue';
 import ServicesComponent from '../components/ServicesComponent.vue';
 import ContactComponent from '../components/ContactComponent.vue';
+import FormComponent from '../components/FormComponent.vue';
+import ParticlesBackground from '../components/ParticlesBackground.vue';
 
 export default {
     name: 'Home',
     components: {
         NavBar,
-        BackgroundCircle,
         ProfileComponent,
         Skills,
         TimeLineComponent,
         CardProyectComponent,
         FooterComponent,
         ServicesComponent,
-        ContactComponent
+        ContactComponent,
+        FormComponent,
+        ParticlesBackground
     },
     data() {
         return {

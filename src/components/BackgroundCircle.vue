@@ -1,6 +1,6 @@
 <template>
 <div>
-    <div class="area-wrapper">
+    <div class="area-wrapper" id="elements">
         <div class="area area-light"></div>
         <div class="area area-dark"></div>
         <ul class="circles">
@@ -27,8 +27,26 @@
 
 <script>
 
+document.addEventListener('mouseover', function() {
+
+});
+
 export default {
     name: 'Circle',
+mounted() {
+  const circles = document.querySelectorAll(".circles li");
+
+  circles.forEach(circle => {
+    circle.style.pointerEvents = "auto";
+
+    circle.addEventListener("click", () => {
+      if (circle.classList.contains("explode")) return;
+      circle.classList.add("explode");
+      setTimeout(() => circle.remove(), 450);
+    });
+  });
+}
+
 }
 </script>
 
@@ -63,7 +81,7 @@ body {
     width: 100%;
     height: 100vh;
     z-index: -1;
-    pointer-events: none;
+    pointer-events: auto;
     top: 0;
     left: 0;
 }
@@ -95,6 +113,26 @@ body {
   opacity: 1;
 }
 
+@keyframes explodeBubble {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(2.8);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.explode {
+  animation: explodeBubble 0.45s ease-out forwards;
+}
+
+
 .circles {
     position: absolute;
     top: 0;
@@ -102,6 +140,7 @@ body {
     width: 100%;
     height: 200vh;
     overflow: hidden;
+    pointer-events: auto !important;
 }
 
 .circles li {
@@ -113,7 +152,8 @@ body {
     background: rgba(255, 255, 255, 0.2);
     animation: animate 15s linear infinite;
     bottom: -150px;
-
+    pointer-events: auto !important;
+    cursor: pointer;
 }
 
 .circles li:nth-child(1) {
