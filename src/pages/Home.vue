@@ -19,18 +19,10 @@
         </div>
         <div id="skills" class="face-in">
             <h2 class="title">Habilidades</h2>
-            <div id="skillsContainer">
-                <Skills class="habilidades" title="Front" :skills="frontendSkills" onclick="scrollToSkills"/>
-                <Skills class="habilidades" title="Backend" :skills="backendSkills" />
-                <Skills class="habilidades" title="Bases de datos" :skills="basesDeDatos" />
-                <Skills class="habilidades" title="Herramientas y más" :skills="herramientas" />
-            </div>
+            <div>
+                <SkillComponent/>
+            </div>            
         </div>
-
-    <div>
-        <SkillComponent/>
-    </div>
-
         <section>
             <div id="projects-container" class="face-in">
                 <div class="projects-header">
@@ -72,7 +64,6 @@ import CardProyectComponent from '../components/CardProyectComponent.vue';
 import FooterComponent from '../components/FooterComponent.vue';
 import NavBar from '../components/NavBar.vue';
 import ProfileComponent from '../components/ProfileComponent.vue';
-import Skills from '../components/Skills.vue';
 import TimeLineComponent from '../components/TimeLineComponent.vue';
 import ServicesComponent from '../components/ServicesComponent.vue';
 import ContactComponent from '../components/ContactComponent.vue';
@@ -87,7 +78,7 @@ export default {
     components: {
         NavBar,
         ProfileComponent,
-        Skills,
+        SkillComponent,
         TimeLineComponent,
         CardProyectComponent,
         FooterComponent,
@@ -95,8 +86,7 @@ export default {
         ContactComponent,
         FormComponent,
         ParticlesBackground,
-        AboutMe,
-        SkillComponent
+        AboutMe
     },
     data() {
         return {
