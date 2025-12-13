@@ -1,4 +1,5 @@
 # mi-portafolio-web
+Portafolio personal realizado usando vue.js
 
 ## Project setup
 ```

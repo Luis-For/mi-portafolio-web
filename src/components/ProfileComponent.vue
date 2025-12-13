@@ -1,7 +1,9 @@
 <template>
 <div class="profile-container" id="profile-container">
     <div class="sidebar">
-        <img class="profile-pic" src="../assets/image/profile.webp" alt="Luis Fornaris" @mouseover="zoom($event.target)" @mouseout="norm($event.target)">
+        <img class="profile-pic" src="../assets/image/profile.webp" alt="Luis Fornaris"
+        @mouseover="zoom($event.currentTarget)"
+        @mouseout="norm($event.currentTarget)">
         <h2 class="name">Luis Ángel<br>Fornaris Rodríguez</h2>
         <div class="divider"></div>
         <div class="social-icons">
@@ -19,7 +21,12 @@
         <h1>Hola Mundo!</h1>
         <h2>Desarrollador full-stack</h2>
         <div class="buttons">
-            <button class="btn-primary" @click="downloadCV" @mouseover="zoom($event.target)" @mouseout="norm($event.target)">CURRICULUM</button>
+            <button class="btn-primary"
+            @click="downloadCV" 
+            @mouseover="zoom($event.currentTarget)"
+            @mouseout="norm($event.currentTarget)">
+                CURRICULUM
+            </button>
             <button class="btn-outline" @click="goToProyectsGit" >PROYECTOS</button>
         </div>
         <p>
@@ -39,7 +46,7 @@
 
 <script>
 import { utils } from '../utils/Utils.js';
-
+const { zoom, norm } = utils();
 
 
 export default {
@@ -69,8 +76,13 @@ export default {
              //@click="()=>window.open('https://www.linkedin.com/in/luis-angel-fornaris-rodriguez-1a0a4b1b7/', 'new tab')"
         },
 
-        zoom() {},
-        norm() {}
+        zoom(el) {
+        zoom(el);
+        },
+
+        norm(el) {
+        norm(el);
+        }
     },
     mounted() { 
         const { zoom, norm } = utils();
@@ -86,8 +98,7 @@ export default {
 
 
 <style scoped>
-    .no-scroll {
-    /* Debe tener altura específica para que funcione */
+.no-scroll {
     max-height: 100vh;
     overflow: hidden;
 }

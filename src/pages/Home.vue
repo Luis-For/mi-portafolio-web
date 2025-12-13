@@ -3,13 +3,19 @@
     <div class="background-app">
         <ParticlesBackground/>
     </div>
-    <header>
-        <NavBar class="NavBar"/>
-    </header>
+
+    <div class="nav-bar-component">
+        <header>
+            <NavBar class="NavBar"/>
+        </header>
+    </div>
 
     <main>
-        <div>
-            <ProfileComponent id="inicio" class="fade-in"/>
+        <div class="profile-component">
+            <ProfileComponent id="inicio" />
+        </div>
+        <div class="about-me-component">
+            <AboutMe/>
         </div>
         <div id="skills" class="face-in">
             <h2 class="title">Habilidades</h2>
@@ -20,6 +26,10 @@
                 <Skills class="habilidades" title="Herramientas y más" :skills="herramientas" />
             </div>
         </div>
+
+    <div>
+        <SkillComponent/>
+    </div>
 
         <section>
             <div id="projects-container" class="face-in">
@@ -68,6 +78,9 @@ import ServicesComponent from '../components/ServicesComponent.vue';
 import ContactComponent from '../components/ContactComponent.vue';
 import FormComponent from '../components/FormComponent.vue';
 import ParticlesBackground from '../components/ParticlesBackground.vue';
+import AboutMe from '../components/AboutMe.vue';
+import SkillComponent from '../components/SkillComponent.vue';
+
 
 export default {
     name: 'Home',
@@ -81,102 +94,12 @@ export default {
         ServicesComponent,
         ContactComponent,
         FormComponent,
-        ParticlesBackground
+        ParticlesBackground,
+        AboutMe,
+        SkillComponent
     },
     data() {
         return {
-            frontendSkills: [{
-                name: 'Vue.js',
-                color: 'green',
-                level: '95',
-                projects: '10',
-                image: "https://img.icons8.com/?size=40&id=rY6agKizO9eb&format=png&color=000000"
-            }, {
-                name: 'React',
-                color: 'blue',
-                level: '68',
-                projects: '2',
-                image: 'https://img.icons8.com/?size=40&id=123603&format=png&color=000000'
-            }, {
-                name: 'Angular',
-                color: 'red',
-                level: '50',
-                projects: '2',
-                image: 'https://img.icons8.com/?size=40&id=71257&format=png&color=000000'
-            },{
-                name:'HTML5',
-                color:'orange',
-                level:'80',
-                projects:'5',
-                image:'https://img.icons8.com/?size=40&id=20909&format=png&color=000000'
-            }],
-
-            backendSkills: [{
-                name: 'SpringBoot',
-                color: 'green',
-                level: '85',
-                projects: '5',
-                image: 'https://img.icons8.com/?size=40&id=90519&format=png&color=000000'
-            },
-            {
-                name:'Java',
-                color: 'blue',
-                level: '88',
-                projects:'5',
-                image: 'https://img.icons8.com/?size=50&id=13679&format=png&color=000000'
-            },
-            {
-                name: 'Node.js',
-                color: 'green',
-                level: '85',
-                projects: '5',
-                image: 'https://img.icons8.com/?size=40&id=hsPbhkOH4FMe&format=png&color=000000'
-            },{
-                name:'C#',
-                color:'#058F92',
-                level:'90',
-                projects:'4',
-                image:'https://img.icons8.com/?size=40&id=55205&format=png&color=9D0DC9'
-            }],
-            basesDeDatos: [{
-                name: 'Postgres',
-                color: 'green',
-                level: '85',
-                projects: '5',
-                image:'https://img.icons8.com/?size=40&id=JRnxU7ZWP4mi&format=png&color=000000'
-            },{
-                name:'Redis',
-                color:'red',
-                level:'83',
-                projects:'2',
-                image:'https://img.icons8.com/?size=40&id=pHS3eRpynIRQ&format=png&color=000000'
-            },{
-                name:'MongoDB',
-                color:'green',
-                level:'70',
-                projects:'3',
-                image:'https://img.icons8.com/?size=40&id=74402&format=png&color=000000'
-            },{
-                name:'MySQL',
-                color:'#058F92',
-                level:'90',
-                projects:'4',
-                image:'https://img.icons8.com/?size=40&id=9nLaR5KFGjN0&format=png&color=058F92'
-            }],
-            herramientas: [{
-                name: 'Postman',
-                color: 'orange',
-                level: '70',
-                projects: '5',
-                image:'https://img.icons8.com/?size=40&id=EPbEfEa7o8CB&format=png&color=000000'
-            },{
-                name:'AWS',
-                color:'black',
-                level:'65',
-                projects:'2',
-                image:'https://img.icons8.com/?size=40&id=33039&format=png&color=000000'
-            }],
-            //
             project: [{
                     title: 'MorphoKey',
                     description: 'XZZZZZZZZZZZ1',
@@ -200,7 +123,8 @@ export default {
                 skillsContainer.scrollIntoView({ behavior: 'smooth' });
             }
         }
-    }
+    },
+
 }
 </script>
 
@@ -227,6 +151,11 @@ main .title {
 
 #inicio {
     padding: 10%;
+}
+
+.about-me-component{
+    padding-left:15%;
+    padding-right: 15%;
 }
 
 #projects-container {
@@ -326,6 +255,7 @@ main .title {
     overflow: hidden; /* Contiene cualquier desbordamiento */
     box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
 }
+
 
 /* Estilos responsivos */
 @media (max-width: 768px) {

@@ -82,7 +82,7 @@ export default {
 .skill-item {
     display: flex;
     justify-content: flex-start;
-    gap: 0.75rem;
+    gap: 0.75rem;   
     padding: 1rem;
     margin: 1rem;
     border-radius: 0.75rem;
