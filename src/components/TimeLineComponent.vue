@@ -68,8 +68,8 @@
       getSideStyle(index) {
         return {
           transform: index % 2 === 0
-            ? 'translateX(-80px)'
-            : 'translateX(80px)'
+            ? 'translateX(-40px)'
+            : 'translateX(40px)'
         };
       }
     },
@@ -180,5 +180,8 @@
   transform: translateY(0);
 }
 
+@media screen {
+  .
+}
 
 </style>
