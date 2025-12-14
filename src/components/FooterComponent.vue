@@ -5,7 +5,8 @@
         <div class="footer-section">
           <h2 class="footer-title">Luis Fornaris</h2>
           <p class="footer-text">Soy una persona muy responsable, atenta que le gusta trabajar en equipo para encontrar 
-            la mejor solución posible. Apasionado por la tecnologia y el desarrollo.
+            la mejor solución posible. Apasionado por la tecnologia y el desarrollo.<br/>
+            Si tienes una idea y quieres realizarla, no dudes en escribirme.
           </p>
         </div>
         <!--Seccion 2 -->
@@ -89,5 +90,8 @@ export default {
   .footer-copy{
     text-align: center;
     color: white;
+    background-color: var(--background-color-contact);
+    padding: 0.5%;
+    margin-bottom: 0%;
   }
 </style>

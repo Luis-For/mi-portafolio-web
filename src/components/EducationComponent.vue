@@ -1,10 +1,10 @@
 <template>
     <div id="educationID" class="education-component">
-        <div class="education-card">
+        <div class="education-card" v-for="education in educations" :key="education">
             <img :src="image" :alt="title" class="education-image"/>
-            <h3>{{ title }}</h3>
-            <p>{{ desription }}</p>
-            <a :href="link" target="_blank">Ver</a>
+            <h3>{{ education.title }}</h3>
+            <p>{{ education.desription }}</p>
+            <!--<a :href="link" target="_blank">Ver</a>-->
         </div>
     </div>
 </template>
@@ -12,11 +12,14 @@
 <script>
 export default{
     name:'EducationComponent',
-    props:{
-        title:String,
-        desription: String,
-        image: String,
-        link: String
+    data(){
+        return{
+            education:[
+                {
+                    title:'Universidad del magdalena',
+                },
+            ]
+        }
     }
 }
 </script>

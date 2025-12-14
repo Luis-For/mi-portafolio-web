@@ -1,38 +1,30 @@
 <template>
-<div>
+<div class="education-component">
+  <h1 class="education-title">Educación</h1>
+  <div class="component"  v-for="(education, index) in educations" :key="index">    
     <section class="design-section">
-        <h1>Educación</h1>
+      
         <div class="timeline">
-
             <div class="timeline-empty">
             </div>
-
             <div class="timeline-middle">
                 <div class="timeline-circle"></div>
             </div>
-            <div class="timeline-component timeline-content">
-                <h3>Ingenieria de sistemas</h3>
-                <p>Pregrado - Universidad del Magdalena</p>
-                <div class="state" @click="openInfo" @mouseover="zoom($event.target)" @mouseout="norm($event.target)">
-                    <p1 class="trigger">Ver más</p1>
-                </div>
-            </div>
-            <div class="timeline-component timeline-content">
-                <h3>Certificados</h3>
-                <p>Certificados realizados en distintas areas como: git, docker, java, springboot, Postgresql, redis, javaspcript.</p>
-                <div class="state">
-                    <h4>EN CURSO</h4>
-                </div>
-            </div>
-            
-            <div class="timeline-middle">
-                <div class="timeline-circle"></div>
-            </div>  
         </div>
+      <div class="timeline-component" :style="getSideStyle(index)"> 
+        <h3>{{ education.title }}</h3>
+        <p>{{ education.type }}</p>
+        <p>{{ education.university }}</p>
+        <div class="state" @click="openInfo" @mouseover="zoom($event.target)" @mouseout="norm($event.target)">
+          <p1 class="trigger">Ver más</p1>
+        </div>        
+      </div>
+      <div class="timeline-component-hover"></div>        
     </section>
     <ModalBase v-if="visible" id="visible" @cerrar="cerrar">
         <h1>cerrar</h1>
     </ModalBase>
+  </div>
 </div>
 </template>
 
@@ -49,20 +41,16 @@
 
     data() {
         return {
-            visible: false,
-            dataEducation:[
+            educations:[
               {
-                id:1,
                 title: 'Ingenieria de sistemas',
-                desription: 'Pregrado - Universidad del Magdalena',
-                image: '../assets/image/education/unimagdalena.png',
-                info: 'Estudios de ingenieria de sistemas en la Universidad del Magdalena, con conocimientos en desarrollo web, bases de datos, redes y seguridad informática. Participación en proyectos académicos y actividades extracurriculares relacionadas con la tecnología.',
+                type: 'Pregrado',
+                university: 'Universidad del Magdalena',
+
               },{
-                id:2,
                 title: 'Ingenieria de sistemas',
-                desription: 'Pregrado - Universidad del Magdalena',
-                image: '../assets/image/education/unimagdalena.png',
-                info: 'Estudios de ingenieria de sistemas en la Universidad del Magdalena, con conocimientos en desarrollo web, bases de datos, redes y seguridad informática. Participación en proyectos académicos y actividades extracurriculares relacionadas con la tecnología.',
+                type: 'Pregrado',
+                university: 'Universidad del Magdalena',
               }
             ]
         }
@@ -76,8 +64,15 @@
       cerrar(){
         this.visible=false;
         document.body.style.overflow = "auto";
-    }
-  },
+      },
+      getSideStyle(index) {
+        return {
+          transform: index % 2 === 0
+            ? 'translateX(-80px)'
+            : 'translateX(80px)'
+        };
+      }
+    },
   mounted() { 
     const { zoom, norm } = utils();
     this.zoom = zoom;
@@ -100,15 +95,12 @@
   padding-bottom: 3%;
 }
 
-.design-section h1{
-    padding: 2%;
-    color: var(--color-text);
-}
 
-.design {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+.education-title{
+  text-align: center;
+  color: var(--color-text);
+  padding: none;
 }
 
 .timeline {
@@ -118,60 +110,75 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  z-index: 1;
 }
-
-.timeline-content {
-  padding: 20px;
-  background: #1f1f1f;
-  -webkit-box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
-          box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
-  border-radius: 5px;
-  color: white;
-  padding: 1.75rem;
-  transition: 0.4s ease;
-  overflow-wrap: break-word !important;
-  margin: 1rem;
-  margin-bottom: 20px;
-  border-radius: 6px;
-}
-
 .timeline-component {
-  margin: 0px 20px 20px 20px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden; /* 🔑 */
+  background-color: #913d8e55;
+  backdrop-filter: blur(10px);  
+  border-radius: 50px;
+  border: 1px solid #8A2387;
+  margin: 0 20px 20px;
+  padding: 3% 10% 3% 5%;
+  transition: transform 0.4s ease;
 }
 
-.state{
-    display: inline-flex;
-    justify-content: center;
-    padding-right: 20%;
-    padding-left: 20%;
-    background-color: #8a23878c;
-    border-radius: 30px;
+/* overlay que sube */
+.timeline-component::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(100, 100, 255, 0.25),
+    rgba(255, 255, 255, 0.2)
+  );
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+  z-index: 0;
 }
 
-@media screen and (min-width: 768px) {
-  .timeline {
-    display: grid;
-    grid-template-columns: 1fr 3px 1fr;
-  }
-  .timeline-middle {
-    position: relative;
-    background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
-    width: 3px;
-    height: 100%;
-  }
-  .main-middle {
-    opacity: 0;
-  }
-  .timeline-circle {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-  }
+/* contenido normal */
+.timeline-component .content {
+  position: relative;
+  z-index: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
+/* contenido hover */
+.timeline-component-hover {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  color: #000;
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* ===== Hover ===== */
+.timeline-component:hover::before {
+  transform: translateY(0);
+}
+
+.timeline-component:hover .content {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.timeline-component:hover .timeline-component-hover {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 </style>

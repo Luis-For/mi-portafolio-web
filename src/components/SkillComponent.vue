@@ -126,7 +126,6 @@
         background-color: rgba(255, 255, 255, 0.1);
         padding-top: 0.01%;
         padding-bottom: 0.1%;
-        margin: 1%;
         overflow: hidden;
         box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
         backdrop-filter: blur(10px);
@@ -135,6 +134,7 @@
         min-width: 10%;
         max-width: 100%;
         scale: 0.8;
+        justify-content: start;
     }
 
     .skill-element:hover{
@@ -146,7 +146,7 @@
         justify-content: center;
         align-items: center;
         min-width: 40px;
-        padding-left: 6%;
+        padding-left: 8%;
     }
 
     .skill-icon img{
@@ -159,6 +159,13 @@
         color: white;
         /*font-family: ;*/
         font-size: 1.2rem;
+    }
+
+    @media screen {
+        .skill-element{
+            scale: 80%;
+            padding-right: 2rem;
+        }
     }
     
 </style>

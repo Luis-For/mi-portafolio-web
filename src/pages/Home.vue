@@ -50,10 +50,10 @@
         </section>
     </div>
     <div>
-        <ContactComponent id="contacto"/>
         <FormComponent/>
     </div>
     <footer>
+        <ContactComponent id="contacto"/>
         <FooterComponent class="endpage" />
     </footer>
 </div>
@@ -87,24 +87,6 @@ export default {
         FormComponent,
         ParticlesBackground,
         AboutMe
-    },
-    data() {
-        return {
-            project: [{
-                    title: 'MorphoKey',
-                    description: 'XZZZZZZZZZZZ1',
-                    image: '',
-                    codeLink: ''
-                },
-                {
-
-                }
-            ],
-            education:[{
-                title:'Ingeneria de sistemas',
-
-            }]
-        }
     },
     methods: {
         scrollToSkills() {

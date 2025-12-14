@@ -11,10 +11,14 @@
             <!--<a href="#"><i class="fab fa-twitter"></i></a>-->
             <!--@click="()=>window.open('https://www.linkedin.com/in/luis-angel-fornaris-rodriguez-1a0a4b1b7/', 'new tab' )"-->
             <a href="https://www.linkedin.com/in/luis-%C3%A1ngel-fornaris-rodr%C3%ADguez-2146561a2/" target="_blank">
-                <i class="fab fa-linkedin-in"></i>
-                <img src="https://img.icons8.com/?size=60&id=13930&format=png&color=000000"/>
+                <i class="fa-linkedin"></i>
+                <img class="icon-linkedin" src="https://img.icons8.com/?size=60&id=13930&format=png&color=000000"/>
             </a>
-            <a href="https://github.com/Luis-For" target="_blank"><i class="fab fa-instagram"><img src="https://img.icons8.com/?size=60&id=62856&format=png&color=000000" alt="" ></i></a>
+            <a href="https://github.com/Luis-For" target="_blank">
+                <i class="fa-github">
+                    <img class="icon-github" src="https://img.icons8.com/?size=60&id=62856&format=png&color=000000" alt="" >
+                </i>
+            </a>
         </div>
     </div>
     <div class="main-content">
@@ -183,6 +187,22 @@ export default {
 
 .social-icons a:hover {
     color: #0047ff;
+}
+
+.icon-linkedin{
+    transition: transform 0.5s ease;
+}
+
+.icon-linkedin:hover{
+    transform: rotate(360deg);
+    transition: transform 0.5s ease;
+}
+.icon-github{
+    transition: transform 0.5s ease;
+}
+.icon-github:hover{
+    transform: rotate(360deg);
+    transition: transform 0.5s ease;
 }
 
 .main-content {
