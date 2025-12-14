@@ -154,8 +154,9 @@ export default {
 
 @media (max-width:768px) {
   .flotante {
-  width: 300px;
-  height: 80%;
-}
+    width: 300px;
+    height: 80%;
+    margin-top: 10%;
+  }
 }
 </style>
