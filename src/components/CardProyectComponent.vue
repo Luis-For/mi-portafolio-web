@@ -259,6 +259,8 @@ export default {
     .proyect-container {
         display: flex;
         flex-direction: column;
+        width: 70%;
+        scale: 95%;
     }
 
     .proyect-container b-card {

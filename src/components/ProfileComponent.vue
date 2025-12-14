@@ -34,7 +34,7 @@
             <button class="btn-outline" @click="goToProyectsGit" >PROYECTOS</button>
         </div>
         <p>
-            desarrollador full-stack con pasión por construir soluciones web eficientes.
+            Desarrollador full-stack con pasión por construir soluciones web eficientes.
             Bienvenido a mi portafolio, donde comparto mis proyectos, habilidades y el camino que estoy construyendo
             en el mundo del desarrollo.
         </p>

@@ -153,6 +153,26 @@ export default {
 }
 
 @media screen {
-  
+.flotante {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background: white;
+  color: #000;
+
+  padding: 8px;
+  border-radius: 14px;
+
+  width: 290px;
+  max-width: 90%;
+  max-height: 70vh;
+  overflow-y: auto;
+
+  z-index: 999999;
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
 }
 </style>
