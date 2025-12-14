@@ -22,7 +22,7 @@ export default {
   width: 100%;
   height: 100vh;
   z-index: -1;
-  pointer-events: visibleStroke;
+  pointer-events: none;
   background: var(--background-color);
 }
 

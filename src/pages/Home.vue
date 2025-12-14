@@ -44,7 +44,7 @@
         </div>
     </div>
     
-    <div class="proyect-content" id="education">
+    <div class="education-component" id="education">
         <section>
             <TimeLineComponent/>
         </section>
@@ -227,6 +227,32 @@ main .title {
     overflow: hidden; /* Contiene cualquier desbordamiento */
     box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
 }
+
+.background-app {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.particles-container {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
+
+main,
+.profile-component,
+.about-me-component,
+.services-component,
+footer {
+  position: relative;
+  z-index: 10;
+}
+
 
 
 /* Estilos responsivos */

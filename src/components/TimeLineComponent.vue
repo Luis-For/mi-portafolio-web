@@ -100,8 +100,6 @@
   padding-bottom: 3%;
 }
 
-
-
 .education-title{
   text-align: center;
   color: var(--color-text);
