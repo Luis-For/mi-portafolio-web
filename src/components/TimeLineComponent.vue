@@ -66,10 +66,15 @@
         document.body.style.overflow = "auto";
       },
       getSideStyle(index) {
+        const isDesktop = window.innerWidth >= 768; //cierto si la resolucion es mayor
+
+        if(!isDesktop){
+          return{};
+        }
         return {
           transform: index % 2 === 0
-            ? 'translateX(-40px)'
-            : 'translateX(40px)'
+            ? 'translateX(-80px)'
+            : 'translateX(80px)'
         };
       }
     },
@@ -181,7 +186,9 @@
 }
 
 @media screen {
-  .
+  .timeline-component {
+    justify-content: center;
+  }
 }
 
 </style>
