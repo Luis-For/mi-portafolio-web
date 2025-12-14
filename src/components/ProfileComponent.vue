@@ -261,7 +261,8 @@ export default {
 @media (max-width: 768px) {
     .profile-container {
         flex-direction: column;
-        padding: 0 10px;
+        padding: 0 100px;
+        margin-top: 15%;
     }
 
     .sidebar,
