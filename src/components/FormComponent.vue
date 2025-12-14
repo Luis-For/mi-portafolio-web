@@ -56,7 +56,7 @@ export default {
       try {
         const params = {
           from_name: this.form.name,
-          from_email: this.form.email,
+          reply_to: this.form.email,
           subject: this.form.subject,
           message: this.form.message
         };
