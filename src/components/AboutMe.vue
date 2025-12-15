@@ -14,14 +14,14 @@
       </div>
 
       <div class="about-card">
-        <h3>Frontend & UX</h3>
+        <h3>Frontend & Diseño UX</h3>
         <p>
           Interfaces claras y modernas usando Vue, React, Angular, HTML y CSS.
         </p>
       </div>
 
       <div class="about-card">
-        <h3>Datos & DevOps</h3>
+        <h3>Analisis y manejo de datos & DevOps</h3>
         <p>
           Big Data con PySpark, Docker, monitoreo con Prometheus y Grafana.
         </p>
@@ -30,9 +30,9 @@
 
     <div class="about-me-content">
       <p class="about-me-description">
-        Soy estudiante de Ingeniería de Sistemas en último semestre, apasionado por entender
-        cómo funcionan las cosas y por qué. Me especializo en crear soluciones escalables
-        basadas en microservicios, análisis de datos y buenas prácticas de desarrollo.
+        Soy un estudiante de Ingeniería de Sistemas en mi último semestre, soy alguien apasionado por la tecnología, el entender
+        cómo funcionan las cosas. Me especializo en crear soluciones escalables
+        basadas en desarrollo de aplicaciones, análisis de datos y buenas prácticas de desarrollo.
         Me considero una persona responsable, curiosa y orientada a resolver problemas reales,
         siempre en constante aprendizaje y crecimiento profesional.
       </p>

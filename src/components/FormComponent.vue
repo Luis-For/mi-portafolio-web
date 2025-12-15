@@ -1,5 +1,8 @@
 <template>
     <div class="form">
+      <div class="form-title">
+        <h1>Contactame</h1>
+      </div>
       <div class="form-wrapper">
         <div class="form-ilustration">
           <img src="../assets/image/pixeltrue-web-development.svg"/>
@@ -98,13 +101,18 @@ export default {
 
 <style>
 .form{
-position: relative;
+  position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;  
   padding: 20px;
   transform: scale(95%);
+}
+
+.form-title{
+  color: var(--color-text);
 }
 
 .form-wrapper {
@@ -227,7 +235,7 @@ position: relative;
   transform: translateY(-2px);
 }
 
-@media screen {
+@media (max-width: 768px) {
   .form{
     /*EDITAR DESPUES PARA QUE SEA MAS RESPONSIVO */
     scale: 0.6;
