@@ -1,5 +1,13 @@
 <template>
     <div class="form">
+      <div class="form-wrapper">
+        <div class="form-ilustration">
+          <img src="../assets/image/pixeltrue-web-development.svg"/>
+          <div class="form-text">
+            <h3 class="form-text-h3">¿Quieres que crear algo nuevo?</h3>
+            <p class="form-text-p">Escribeme!</p>
+          </div>
+        </div>
         <div class="form-contact">
             <section class="contact-section">
             <h2 class="contact-title">Escribeme</h2>
@@ -32,6 +40,7 @@
             </section>
         </div>
     </div>
+  </div>
 </template>
 
 <script>
@@ -95,17 +104,54 @@ position: relative;
   align-items: center;
   min-height: 100vh;  
   padding: 20px;
+  transform: scale(95%);
+}
+
+.form-wrapper {
+  display: flex;
+  align-items: stretch;
+  max-height: 721px;
+}
+
+.form-text{
+  text-align: center;
+}
+
+.form-text-h3{
+  color: white;
+  font-size: 1.8rem;
+  
+}
+
+.form-text-p{
+  color: white;
+}
+
+.form-ilustration{
+  display: flex;
+  flex-direction: column;
+  padding: 15% 0% 0% 0%;
+  background-color: rgba(142, 81, 255, 0.675);
+  border-radius: 20px 0px 0 20px;
+}
+
+.form-ilustration img{
+  width: 500px;
+  height: auto;
+  padding: 0;
+  display: block; /* elimina espacios fantasma */
 }
 
 .form-contact{
   background: rgba(20, 20, 30, 0.85);
   border: 0.5px solid #2a2a35;
   backdrop-filter: blur(5px);
-  border-radius: 60px;
-  padding: 2px 50px;
+  border-radius: 0px 60px 60px 0px;
+  padding: 0px 50px;
   max-width: 500px;
   width: 90%;
   box-shadow: 0 0 20px rgba(140, 90, 255, 0.2);
+  margin: 0%;
 }
 
 .contact-section {
@@ -181,4 +227,10 @@ position: relative;
   transform: translateY(-2px);
 }
 
+@media screen {
+  .form{
+    /*EDITAR DESPUES PARA QUE SEA MAS RESPONSIVO */
+    scale: 0.6;
+  }
+}
 </style>

@@ -27,8 +27,6 @@
             <div id="projects-container" class="face-in">
                 <div class="projects-header">
                     <h2>Proyectos</h2>
-                    <div class="line" id="line">
-                    </div>
                 </div>
             </div>
             
@@ -156,30 +154,6 @@ main .title {
     white-space: nowrap;
     color: var(--color-text);
     /* para que no se corte */
-}
-
-.projects-header .line {
-    flex-grow: 1;
-    height: 2px;
-    animation: rgbBorder 1s linear infinite;
-}
-/*animation: rgbBorder 1s linear infinite;*/
-@keyframes rgbBorder {
-    0% {
-        background-color: red;
-    }
-
-    33% {
-        background-color: lime;
-    }
-
-    66% {
-        background-color: blue;
-    }
-
-    100% {
-        background-color: red;
-    }
 }
 
 #skillsContainer {

@@ -113,57 +113,62 @@
 
 <style>
     .skill-section{
-        background-color: none;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 0.75rem;
+        gap: 1.25rem;
+        max-width: 900px;
+        margin: 0 auto;
     }
 
     .skill-element{
         display: flex;
         gap: 10%;
         background-color: rgba(255, 255, 255, 0.1);
-        padding-top: 0.01%;
-        padding-bottom: 0.1%;
+        padding: 0.5rem 1rem;
         overflow: hidden;
         box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
         backdrop-filter: blur(10px);
-        border-radius: 75px;
+        border-radius: 999px;
         min-height: 100%;
         min-width: 10%;
         max-width: 100%;
-        scale: 0.8;
+        scale: 1;
         justify-content: start;
     }
 
     .skill-element:hover{
         background-color: var(--color-skill-element);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 22px rgba(0,0,0,0.4);
     }
 
     .skill-icon{
         display: flex;
         justify-content: center;
         align-items: center;
-        min-width: 40px;
-        padding-left: 8%;
+        min-width: 44px;
+        padding-left: 0;
     }
 
     .skill-icon img{
-        display: block;
-        max-width: 100%;
-        max-height: 100%;
+        height: 32px;
+        width: 32px;
+        object-fit: contain;
+        filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3)); 
     }
 
     .skill-title{
         color: white;
-        /*font-family: ;*/
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+        letter-spacing: 0.3px;
+        white-space: nowrap;        
     }
 
     @media screen {
         .skill-element{
-            scale: 80%;
+            scale: 0.9;
             padding-right: 2rem;
         }
     }
