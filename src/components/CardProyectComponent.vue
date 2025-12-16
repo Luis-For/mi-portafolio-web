@@ -131,13 +131,13 @@ export default {
 <style>
 .proyect-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
     padding-left: 3rem;
     padding-right: 3rem;
     margin: 0 auto;
-    max-width: max-content;
-    animation: zoomIn 0.5s forwards; 
+    max-width: 1200px;
+    animation: zoomIn 0.5s ease forwards; 
 }
 
 .proyect-container .mb-2 {
@@ -148,52 +148,25 @@ export default {
 
 .image img {
     width: 100%;
-    height: 200px;
-    border-radius: 0.5rem;
-    padding: 0%;
-    margin: 0;
-}
-
-.proyect-container:hover {
-    transform: scale(2px);
-    animation: rgbColor 3s infinite;
+    height: 180px;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+    object-fit: cover;
 }
 
 .proyect-container b-card {
     background-color: #232338;
-    padding: 2rem;
-    border: 1px solid rgb(67, 67, 67);
+    padding: 0.2% 0.2% 5% 0.2%;
+    border: 1px solid #3a3a3a; /*rgb(67, 67, 67);*/
     border-radius: 1rem;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
     cursor: pointer;
-    padding-top: 0.2%;
-    padding-left: 0.2%;
-    padding-right: 0.2%;
 }
 
 .proyect-container b-card:hover {
-    transform: translateY(-2px);
-    transform: scale(1.02);
+    transform: translateY(-6px) scale(1.02);
     background-color: #1F1F1F;
-    animation: rgbBorders 1s linear infinite;
-}
-
-@keyframes rgbBorders {
-    0% {
-        border-color: red;
-    }
-
-    33% {
-        border-color: lime;
-    }
-
-    66% {
-        border-color: blue;
-    }
-
-    100% {
-        border-color: red;
-    }
+    box-shadow: 0 12px 30px rgba(174, 0, 255, 0.56);
+    border-color: #6a5cff;
 }
 
 .proyect-container b-card-text {
