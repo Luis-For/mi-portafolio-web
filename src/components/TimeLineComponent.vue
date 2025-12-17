@@ -3,14 +3,6 @@
   <h1 class="education-title">Educación</h1>
   <div class="component"  v-for="(education, index) in educations" :key="index">    
     <section class="design-section">
-      
-        <div class="timeline">
-            <div class="timeline-empty">
-            </div>
-            <div class="timeline-middle">
-                <div class="timeline-circle"></div>
-            </div>
-        </div>
       <div class="timeline-component" :style="getSideStyle(index)"> 
         <h3>{{ education.title }}</h3>
         <p>{{ education.type }}</p>
@@ -48,7 +40,7 @@
                 university: 'Universidad del Magdalena',
 
               },{
-                title: 'Ingenieria de sistemas',
+                title: 'Cursos',
                 type: 'Pregrado',
                 university: 'Universidad del Magdalena',
               }
@@ -97,7 +89,6 @@
   min-height: 50vh;
   padding: 5px 0;
   font-family: Jost;
-  padding-bottom: 3%;
 }
 
 .education-title{

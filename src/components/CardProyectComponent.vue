@@ -197,19 +197,19 @@ export default {
 }
 
 .modal {
-  position: absolute;
+  position: sticky;
   top: 110%;
   left: 0;
   background-color: white;
   color: #232338;
-  padding: 1rem;
+  padding: 3rem;
   border-radius: 0.5rem;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   opacity: 0;
   pointer-events: none;
   transform: scale(0.95);
   transition: all 0.3s ease;
-  z-index: 100;
+  z-index: 9999;
   width: 250px;
   
 }

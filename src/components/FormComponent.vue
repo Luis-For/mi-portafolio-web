@@ -72,10 +72,10 @@ export default {
           subject: this.form.subject,
           message: this.form.message
         };
-
+        //crear template y idServicio publico en emailjs 
         await emailjs.send(
-          "service_v96gd6f",     // <-- reemplaza
-          "template_ycqc2nd",    // <-- reemplaza
+          "service_v96gd6f",     // <-- reemplazar id servicio
+          "template_ycqc2nd",    // <-- reemplaza id template
           params,
           "yvtmjJ3ABiuUKIYYU"      // <-- reemplaza
         );
@@ -239,6 +239,31 @@ export default {
   .form{
     /*EDITAR DESPUES PARA QUE SEA MAS RESPONSIVO */
     scale: 0.6;
+    padding-bottom: 50%;
   }
+
+  .form-wrapper {
+    display: grid;
+  }
+
+  .form-contact{
+    border-radius: 0%;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .form-ilustration{
+    display: block;
+    border-radius: 0%;
+    width: 600px;
+    padding: 0%;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .form-ilustration img{
+    justify-self: center;
+    width: 200px;
+    height: auto;
+  }
+
 }
 </style>

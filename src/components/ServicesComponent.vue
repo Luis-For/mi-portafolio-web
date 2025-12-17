@@ -63,6 +63,10 @@ export default{
 </script>
 
 <style>
+
+  .services{
+    transform: scale(0.8);
+  }
   .service {
     position: relative;
     width: 300px;
@@ -84,8 +88,8 @@ export default{
     inset: 0;
     background: linear-gradient(
         to top,
-        rgb(100, 100, 255),
-        rgb(255, 255, 255)
+        rgb(106, 0, 255),
+        rgb(170, 0, 255)
     );
     transform: translateY(100%);
     transition: transform 0.4s ease;

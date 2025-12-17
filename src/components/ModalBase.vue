@@ -76,7 +76,7 @@ export default {
   max-height: 90vh;
   overflow-y: auto;
 
-  z-index: 999999;
+  z-index: 999;
 
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
 }

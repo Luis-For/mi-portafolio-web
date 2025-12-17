@@ -14,6 +14,9 @@
         <div class="profile-component">
             <ProfileComponent id="inicio" />
         </div>
+        <div class="continue-component"  @click="toAboutMe()">
+            <ContinueComponent class="continue"/>
+        </div>
         <div class="about-me-component">
             <AboutMe/>
         </div>
@@ -69,6 +72,7 @@ import FormComponent from '../components/FormComponent.vue';
 import ParticlesBackground from '../components/ParticlesBackground.vue';
 import AboutMe from '../components/AboutMe.vue';
 import SkillComponent from '../components/SkillComponent.vue';
+import ContinueComponent from '../components/ContinueComponent.vue';
 
 
 export default {
@@ -76,6 +80,7 @@ export default {
     components: {
         NavBar,
         ProfileComponent,
+        ContinueComponent,
         SkillComponent,
         TimeLineComponent,
         CardProyectComponent,
@@ -91,6 +96,13 @@ export default {
             const skillsContainer = document.getElementById('skills');
             if (skillsContainer) {
                 skillsContainer.scrollIntoView({ behavior: 'smooth' });
+            }
+        },
+        toAboutMe(){
+            const aboutMeComponent=document.getElementsByClassName('continue-component');
+            if(aboutMeComponent){
+                console.log('funciona el continue', aboutMeComponent);
+                aboutMeComponent.scrollIntoView({behavior: 'smooth', block: 'start'});
             }
         }
     },
@@ -120,7 +132,7 @@ main .title {
 }
 
 #inicio {
-    padding: 10%;
+    padding: 10% 10% 7%;
 }
 
 .about-me-component{
@@ -177,7 +189,7 @@ main .title {
     font-size: 2.5rem;
     color: var(--color-text);
     padding-top: 30px;
-    padding-bottom: 20px;
+    margin-bottom: 0;
 }
 
 .services {
@@ -186,7 +198,7 @@ main .title {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 2rem 2rem 2rem 2rem;
+    padding: 0 2rem 2rem 2rem;
 }
 
 .habilidades {

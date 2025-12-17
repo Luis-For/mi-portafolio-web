@@ -22,7 +22,7 @@
         </div>
     </div>
     <div class="main-content">
-        <h1>Hola Mundo!</h1>
+        <h1 class="main-content-title">Hola Mundo!</h1>
         <h2>Desarrollador full-stack</h2>
         <div class="buttons">
             <button class="btn-primary"
@@ -213,10 +213,20 @@ export default {
 }
 
 .main-content h1 {
+   /* text-wrap: nowrap;*/
     font-size: 60px;
     font-weight: 800;
+   /* width: 800px;*/
     margin-bottom: 10px;
+    /*overflow: hidden;
+    animation: typing 2s steps(30) infinite alternate-reverse;*/
 }
+/* animacion de tipado mas adelante
+@keyframes typing {
+    from{
+        width: 0px;
+    }
+}*/
 
 .main-content h2 {
     font-size: 22px;

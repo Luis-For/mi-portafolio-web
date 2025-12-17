@@ -182,7 +182,6 @@ export default {
   color: var(--navbar-color-text);
   font-weight: bold;
 }
-
 /* Estilos del botón hamburguesa (oculto por defecto) */
 .menu-toggle {
   display: none;
