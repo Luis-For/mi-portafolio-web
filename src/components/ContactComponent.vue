@@ -1,8 +1,8 @@
 <template>
   <div class="contact-container">
-    <h2 class="contact-title">Contáctame</h2>
+    <!--<h2 class="contact-title">Contáctame</h2>-->
     <p class="contact-subtitle">
-      ¿Tienes una idea o proyecto en mente? Escríbeme 👋
+      ¿Tienes una idea o proyecto en mente y necesitas hablarlo mas personal? Escríbeme 👋
     </p>
 
     <div class="contact-cards">
@@ -41,10 +41,10 @@ export default {
 </script>
 
 <style>
-    .contact-container {
+.contact-container {
   background: linear-gradient(180deg, #1a0b2e, #2a003e);
   padding: 4rem 2rem;
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
   color: white;
   text-align: center;
 }
