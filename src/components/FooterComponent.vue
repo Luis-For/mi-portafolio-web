@@ -2,18 +2,27 @@
   <footer class="footer">
     <div class="footer-content">
 
-      <!-- Col 1 -->
-      <div class="footer-section">
+      <!-- Brand -->
+      <div class="footer-section brand">
         <h2 class="footer-title">Luis Fornaris</h2>
         <p class="footer-text">
-          Desarrollador apasionado por la tecnología y la creación de soluciones
-          eficientes. Me gusta trabajar en equipo y convertir ideas en proyectos reales.
+          Desarrollador de software enfocado en crear aplicaciones modernas,
+          escalables y bien estructuradas. Apasionado por el backend, frontend
+          y las buenas prácticas.
         </p>
+
+        <div class="footer-stack">
+          <span>Java</span>
+          <span>Spring Boot</span>
+          <span>Vue</span>
+          <span>React</span>
+          <span>Docker</span>
+        </div>
       </div>
 
-      <!-- Col 2 -->
+      <!-- Links -->
       <div class="footer-section">
-        <h2 class="footer-title">Enlaces</h2>
+        <h3 class="footer-subtitle">Navegación</h3>
         <ul class="footer-links">
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#skills">Habilidades</a></li>
@@ -22,12 +31,12 @@
         </ul>
       </div>
 
-      <!-- Col 3 -->
+      <!-- Contact -->
       <div class="footer-section">
-        <h2 class="footer-title">Escríbeme</h2>
+        <h3 class="footer-subtitle">Contacto</h3>
 
         <div class="footer-socials">
-          <a href="#" aria-label="Github">
+          <a href="#" aria-label="GitHub">
             <img src="https://img.icons8.com/?size=100&id=3tC9EQumUAuq&format=png&color=ffffff"/>
           </a>
           <a href="#" aria-label="LinkedIn">
@@ -38,19 +47,19 @@
           </a>
         </div>
 
-        <p class="footer-email">luisfor90@gmail.com</p>
+        <a class="footer-email" href="mailto:luisfor90@gmail.com">
+          luisfor90@gmail.com
+        </a>
       </div>
 
     </div>
 
-    <hr class="footer-divider" />
-
-    <p class="footer-copy">
-      © 2025 Luis Ángel Fornaris Rodríguez · Todos los derechos reservados
-    </p>
+    <div class="footer-bottom">
+      <span>© 2025 Luis Ángel Fornaris Rodríguez</span>
+      <span>Hecho con Vue.js 💜</span>
+    </div>
   </footer>
 </template>
-
 
 <script>
 
@@ -75,36 +84,61 @@ export default {
 </script>
 
 <style>
-.footer {
-  background: linear-gradient(180deg, #120018, #1a0026);
-  color: white;
+  .footer {
+  background: linear-gradient(180deg, #0d0015, #1a0026);
+  color: #ffffff;
 }
 
 .footer-content {
-  display: flex;
-  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
   gap: 3rem;
-  padding: 4rem 8%;
-  flex-wrap: wrap;
 }
 
 .footer-section {
-  flex: 1;
-  min-width: 220px;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-title {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
   color: #d9b3ff;
+  margin-bottom: 1rem;
+}
+
+.footer-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #caa6ff;
 }
 
 .footer-text {
   font-size: 0.95rem;
-  opacity: 0.85;
   line-height: 1.6;
+  opacity: 0.85;
 }
 
+/* Stack */
+.footer-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.2rem;
+}
+
+.footer-stack span {
+  font-size: 0.75rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.1);
+  color: #e0caff;
+}
+
+/* Links */
 .footer-links {
   list-style: none;
   padding: 0;
@@ -115,15 +149,17 @@ export default {
 }
 
 .footer-links a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
-  opacity: 0.8;
-  transition: color 0.3s ease, padding-left 0.3s ease;
+  font-size: 0.9rem;
+  opacity: 0.75;
+  transition: all 0.25s ease;
 }
 
 .footer-links a:hover {
+  opacity: 1;
   color: #b366ff;
-  padding-left: 6px;
+  transform: translateX(6px);
 }
 
 /* Socials */
@@ -134,19 +170,19 @@ export default {
 }
 
 .footer-socials a {
-  width: 45px;
-  height: 45px;
-  background: rgba(255,255,255,0.08);
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
+  background: rgba(255,255,255,0.08);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease, background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .footer-socials a:hover {
-  transform: translateY(-5px) scale(1.1);
-  background: rgba(179, 102, 255, 0.4);
+  background: rgba(179,102,255,0.35);
+  transform: translateY(-4px) scale(1.1);
 }
 
 .footer-socials img {
@@ -155,35 +191,41 @@ export default {
 
 /* Email */
 .footer-email {
+  color: #ffffff;
   font-size: 0.9rem;
   opacity: 0.85;
+  text-decoration: none;
 }
 
-/* Divider & copy */
-.footer-divider {
-  border: none;
-  height: 1px;
-  background: rgba(255,255,255,0.15);
-  margin: 0 8%;
+.footer-email:hover {
+  color: #b366ff;
 }
 
-.footer-copy {
-  text-align: center;
-  font-size: 0.85rem;
+/* Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.12);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
   opacity: 0.7;
-  padding: 1rem 0;
-  margin: 0%;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .footer-content {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     text-align: center;
   }
 
   .footer-socials {
     justify-content: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
   }
 }
 
