@@ -61,9 +61,9 @@ export default {
 <style>
 .flotante {
   position: fixed;
-  top: 50%;
+  top: 440px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0.9);
 
   background: white;
   color: #000;
@@ -73,7 +73,7 @@ export default {
 
   width: 800px;
   max-width: 90%;
-  max-height: 90vh;
+  max-height: calc(100vh - 100px);
   overflow-y: auto;
 
   z-index: 999;

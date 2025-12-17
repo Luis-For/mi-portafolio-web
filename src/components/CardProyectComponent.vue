@@ -60,9 +60,7 @@ export default {
         return {
             cards: [{
                     title: 'MorphoKey',
-                    img: 'https://img.icons8.com/?size=40&id=UGLDQf1K9y5P&format=png&color=000000',
-                    linkImg:'https://www.claro.com.co/portal/co/recursos_contenido/1718312628153-banner-desk.jpg',
-                    article: 'Backend',
+                    linkImg:'https://s1.significados.com/foto/taxonomia-og.jpg',
                     text: 'Aplicación para la identificación de especies mediante claves taxonómicas digitales, facilitando el análisis biológico y la clasificación de organismos de manera interactiva.',
                     link: 'git',
                     resume: 'MorphoKey es un proyecto orientado a la digitalización de claves taxonómicas para facilitar la identificación de especies vegetales o animales. Integra una interfaz intuitiva y un flujo de decisiones estructurado que guía al usuario a través de características morfológicas clave. El sistema permite explorar, comparar y validar especies mediante filtros dinámicos, reglas taxonómicas y criterios biológicos. Su objetivo es simplificar el trabajo de estudiantes, investigadores y profesionales de la biología, aportando una herramienta clara, accesible y sistemática para clasificar organismos sin necesidad de materiales físicos.'
@@ -70,8 +68,7 @@ export default {
                 {
                     title: 'Api con microservicios',
                     img: 'https://img.icons8.com/?size=40&id=UGLDQf1K9y5P&format=png&color=000000',
-                    linkImg:'https://evolbit.net/blog/wp-content/uploads/2024/02/big-data-diagrama-red-futurista-que-muestra-puntos-acceso-al-servidor-infosystem-1-1089x730.jpg',
-                    article: 'Backend',
+                    linkImg:'https://blog.tenea.com/wp-content/uploads/2021/03/microservices-architecture-.png',
                     text: 'Sistema compuesto por cuatro microservicios independientes, desarrollados con distintos patrones de diseño para asegurar escalabilidad, mantenibilidad y desacoplamiento.',
                     link: 'git',
                     resume: 'Este proyecto consiste en un ecosistema de cuatro microservicios construidos bajo una arquitectura distribuida y orientada a patrones avanzados de diseño. Cada microservicio cumple una responsabilidad única siguiendo principios como SOLID, DDD (Domain Driven Design), CQRS y el uso de gateways para el enrutamiento. Incluye autenticación, comunicación interna mediante REST o mensajería, manejo centralizado de errores y un pipeline de datos optimizado. El objetivo es demostrar cómo diferentes patrones influyen en la robustez y escalabilidad de un sistema modular, ideal para proyectos empresariales y soluciones de alto volumen.'
@@ -80,7 +77,6 @@ export default {
                     title: 'Detección de Cyberbullying en Redes Sociales usando NLP y ML',
                     img: 'https://img.icons8.com/?size=40&id=UGLDQf1K9y5P&format=png&color=000000',
                     linkImg:'https://www.claro.com.co/portal/co/recursos_contenido/1718312628153-banner-desk.jpg',
-                    article: 'Backend',
                     text: 'Proyecto de detección de cyberbullying utilizando técnicas de NLP y ML usando python y diferentes librerías.',
                     link: 'https://github.com/C4mg943/Repo-IA-2025-2/blob/main/Cyberbullying_Detection_using_NLP_and_Machine_Learning.ipynb',
                     resume: `El proyecto desarrollado consiste en la implementación de un sistema de clasificación y regresión para la detección de 
@@ -95,9 +91,7 @@ export default {
                 },
                 {
                     title: 'Generación de códigos QR',
-                    img: 'https://img.icons8.com/?size=40&id=UGLDQf1K9y5P&format=png&color=000000',
-                    linkImg:'https://www.cloudmasters.es/wp-content/uploads/2020/05/DBaaS.jpg',
-                    article: 'Backend',
+                    linkImg:'https://miro.medium.com/0*Anu9J_EsIETILqsD.jpg',
                     text: 'Proyecto de generación de códigos QR dinámicos y estáticos con distintas librerías en Java',
                     link: 'git',
                     resume: `El proyecto de generación de códigos QR en Java permite crear códigos QR tanto estáticos como dinámicos utilizando diversas librerías especializadas. Los códigos QR estáticos contienen información fija, mientras que los dinámicos pueden ser actualizados sin necesidad de regenerar el código.
@@ -105,18 +99,9 @@ export default {
                     Este proyecto es ideal para aplicaciones en marketing, inventarios y gestión de información, proporcionando una solución eficiente y flexible para la generación de códigos QR en entornos Java.`   
                 },
                 {
-                    title: 'Api con microservicios',
+                    title: 'Base de datos de la champions',
                     img: 'https://img.icons8.com/?size=40&id=UGLDQf1K9y5P&format=png&color=000000',
-                    linkImg:'https://miro.medium.com/0*Anu9J_EsIETILqsD.jpg',
-                    article: 'Backend',
-                    text: 'Proyecto de 4 microservicios con distintos patrones de diseño',
-                    link: 'git'
-                },
-                {
-                    title: 'Api con microservicios',
-                    img: 'https://img.icons8.com/?size=40&id=UGLDQf1K9y5P&format=png&color=000000',
-                    linkImg:'https://descargas.intef.es/cedec/proyectoedia/biologia_geologia/contenidos/investigando_clasificacion/botones_clave3.jpg',
-                    article: 'Backend',
+                    linkImg:'https://www.cloudmasters.es/wp-content/uploads/2020/05/DBaaS.jpg',
                     text: 'Proyecto de 4 microservicios con distintos patrones de diseño',
                     link: 'git'
                 }
