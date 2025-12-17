@@ -1,17 +1,19 @@
 <template>
-  <div v-if="card" class="flotante" id="modal">
-    <img class="close" src="https://img.icons8.com/?size=100&id=13903&format=png&color=CC5DE8" @click="cerrar">
-    <div class="content-modal">
-      <img :src="card.linkImg" />
-      <h1 id="titulo">{{ card.title }}</h1>
-      <p>{{ card.description }}</p>
-      <p>{{ card.resume }}</p>
-      <div class="buttons">
-        <button class="button-principal">Ver proyecto</button>
-        <button class="button-second">Ir al proyecto</button>
+  <teleport to="body">
+    <div v-if="card" class="flotante" id="modal">
+      <img class="close" src="https://img.icons8.com/?size=100&id=13903&format=png&color=CC5DE8" @click="cerrar">
+      <div class="content-modal">
+        <img :src="card.linkImg" />
+        <h1 id="titulo">{{ card.title }}</h1>
+        <p>{{ card.description }}</p>
+        <p>{{ card.resume }}</p>
+        <div class="buttons">
+          <button class="button-principal">Ver proyecto</button>
+          <button class="button-second">Ir al proyecto</button>
+        </div>
       </div>
     </div>
-  </div>
+  </teleport>
 </template>
 
 <script>
@@ -78,7 +80,9 @@ export default {
 
   z-index: 999;
 
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  box-shadow:     
+    0 25px 60px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(0, 0, 0, 0.05);
 }
 
 .content-modal {
@@ -87,6 +91,7 @@ export default {
 
 .content-modal h1{
   font-size: 32px;
+  font-weight: 700;
   margin-bottom: 10px;
   text-align: center;
 }

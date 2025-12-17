@@ -65,7 +65,7 @@ export default{
 <style>
 
   .services{
-    transform: scale(0.8);
+    transform: none;
   }
   .service {
     position: relative;
@@ -79,6 +79,7 @@ export default{
     margin: 1rem;
     color: var(--color-text);
     overflow: hidden;
+    transform: scale(0.8);
 }
 
 /* ===== Capa que sube ===== */

@@ -64,22 +64,7 @@
 <script>
 
 export default {
-  name: 'FooterComponent',
-  methods: {
-    loadPhoto() {
-      const img = document.createElement('img');
-      img.src = 'https://img.icons8.com/?size=100&id=113989&format=png&color=000000';
-      img.alt = 'Ícono Luis For';
-
-      const contenedor = document.getElementById('imgFooter');
-      if (contenedor) {
-        contenedor.appendChild(img);
-      }
-    }
-  },
-  mounted() {
-    this.loadPhoto();
-  }
+  name: 'FooterComponent'
 }
 </script>
 
