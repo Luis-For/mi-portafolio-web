@@ -162,6 +162,7 @@ export default {
     width: 300px;
     height: 80%;
     margin-top: 10%;
+    top: 350px;
   }
 }
 </style>

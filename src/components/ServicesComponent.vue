@@ -131,4 +131,10 @@ export default{
     transform: translateY(0);
 }
 
+@media (max-width:768px) {
+  .services{
+    scale: 0.7;
+  }
+}
+
 </style>

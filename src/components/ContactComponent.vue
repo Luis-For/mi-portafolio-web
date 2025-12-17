@@ -45,8 +45,11 @@ export default {
   background: linear-gradient(180deg, #1a0b2e, #2a003e);
   padding: 1rem 2rem 2rem;
   border-radius: 20px 20px 0 0;
-  color: white;
   text-align: center;
+}
+
+.contact-container p, span{
+  color: white;
 }
 
 .contact-title {

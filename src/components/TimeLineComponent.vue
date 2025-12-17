@@ -8,28 +8,20 @@
         <p>{{ education.type }}</p>
         <p>{{ education.university }}</p>
         <div class="state" @click="openInfo" @mouseover="zoom($event.target)" @mouseout="norm($event.target)">
-          <p1 class="trigger">Ver más</p1>
+          <!--<p1 class="trigger">Ver más</p1>-->
         </div>        
       </div>
       <div class="timeline-component-hover"></div>        
     </section>
-    <ModalBase v-if="visible" id="visible" @cerrar="cerrar">
-        <h1>cerrar</h1>
-    </ModalBase>
   </div>
 </div>
 </template>
 
 <script>
-  import ModalBase from './ModalBase.vue';
   import { utils } from '../utils/Utils.js';
 
   export default{
-    name:'TimeLineComponent', 
-
-    components:{
-      ModalBase
-    },
+    name:'TimeLineComponent',
 
     data() {
         return {
@@ -95,6 +87,10 @@
   text-align: center;
   color: var(--color-text);
   padding: none;
+}
+
+.component h1, h3, p, p1{
+  color: var(--color-text);
 }
 
 .timeline {

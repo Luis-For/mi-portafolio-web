@@ -50,7 +50,7 @@
             <TimeLineComponent/>
         </section>
     </div>
-    <div>
+    <div id="contacto">
         <FormComponent/>
     </div>
     <footer>
