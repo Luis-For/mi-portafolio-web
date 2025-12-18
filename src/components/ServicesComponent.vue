@@ -133,7 +133,8 @@ export default{
 
 @media (max-width:768px) {
   .services{
-    scale: 0.7;
+    transform: scale(0.95);
+    padding: 0%;
   }
 }
 

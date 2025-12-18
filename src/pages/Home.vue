@@ -1,9 +1,11 @@
 <template>
 <div id="home">
+    <!-- Fondo -->
     <div class="background-app">
         <ParticlesBackground/>
     </div>
 
+    <!-- Barra de navegación -->
     <div class="nav-bar-component">
         <header>
             <NavBar class="NavBar"/>
@@ -11,21 +13,26 @@
     </div>
 
     <main>
+        <!-- Zona principal -->
         <div class="profile-component">
             <ProfileComponent id="inicio" />
         </div>
+        <!-- Icono animado de continuar -->
         <div class="continue-component"  @click="toAboutMe()">
-            <ContinueComponent class="continue"/>
+            <ContinueComponent class="continue" id="continue-component"/>
         </div>
+        <!-- Sobre mi componente -->
         <div class="about-me-component">
             <AboutMe/>
         </div>
+        <!-- Habilidades contenedor -->
         <div id="skills" class="face-in">
             <h2 class="title">Habilidades</h2>
             <div>
                 <SkillComponent/>
             </div>            
         </div>
+        <!-- Proyectos -->
         <section>
             <div id="projects-container" class="face-in">
                 <div class="projects-header">
@@ -38,21 +45,24 @@
             </div>
         </section>
     </main>
+    <!-- Servicios -->
     <div class="services-component" id="servicesComponent">
         <h1 class="services-title">Servicios</h1>
         <div class="services">
             <ServicesComponent/>
         </div>
     </div>
-    
+    <!-- Educación -->
     <div class="education-component" id="education">
         <section>
             <TimeLineComponent/>
         </section>
     </div>
+    <!-- Formulario de contacto-->
     <div id="contacto">
         <FormComponent/>
     </div>
+    <!-- Pie de pagina-->
     <footer>
         <ContactComponent id="contacto"/>
         <FooterComponent class="endpage" />
@@ -99,7 +109,7 @@ export default {
             }
         },
         toAboutMe(){
-            const aboutMeComponent=document.getElementsByClassName('continue-component');
+            const aboutMeComponent=document.getElementById('continue-component');
             if(aboutMeComponent){
                 console.log('funciona el continue', aboutMeComponent);
                 aboutMeComponent.scrollIntoView({behavior: 'smooth', block: 'start'});
@@ -230,14 +240,14 @@ main .title {
   pointer-events: none;
 }
 
-main,
-.profile-component,
-.about-me-component,
-.services-component,
-footer {
-  position: relative;
-  z-index: 10;
-}
+    main,
+    .profile-component,
+    .about-me-component,
+    .services-component,
+    footer {
+    position: relative;
+    z-index: 10;
+    }
 
 
 

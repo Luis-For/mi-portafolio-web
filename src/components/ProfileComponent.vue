@@ -3,7 +3,9 @@
     <div class="sidebar">
         <img class="profile-pic" src="../assets/image/profile.webp" alt="Luis Fornaris"
         @mouseover="zoom($event.currentTarget)"
-        @mouseout="norm($event.currentTarget)">
+        @mouseout="norm($event.currentTarget)"
+        draggable="false"
+        oncontextmenu="return false">
         <h2 class="name">Luis Ángel<br>Fornaris Rodríguez</h2>
         <div class="divider"></div>
         <div class="social-icons">

@@ -30,16 +30,15 @@ const applyTheme = (theme) => {
     document.documentElement.style.setProperty('--navbar-color-text','black');
     document.documentElement.style.setProperty('--footer-color','#878DF0');
     document.documentElement.style.setProperty('--background-color-contact','rgba(91, 39, 245, 0.5)'); //rgba(42, 42, 74, 1)
-    document.documentElement.style.setProperty('--background-color','linear-gradient(to bottom, #c7a3e6, #9b6bd3)')
-    //linear-gradient(to bottom, #120018, #2a003e)
-    //document.documentElement.style.setProperty('--background-color','linear-gradient(to bottom, #120018, #2a003e)')
+    document.documentElement.style.setProperty('--background-color','linear-gradient(to bottom, #c7a3e6, #9b6bd3)');
+    document.documentElement.style.setProperty('--color-text-inverse','black');
   }else{
     document.documentElement.style.setProperty('--color-text','white');
     document.documentElement.style.setProperty('--navbar-color-text','white');
     document.documentElement.style.setProperty('--footer-color','#0F1125'); //#0F1125 #000000
     document.documentElement.style.setProperty('--background-color-contact','rgba(42, 42, 74, 1)');
-    //document.documentElement.style.setProperty('--background-color','linear-gradient(to bottom, #2a003e, #6a0dad)')
-    document.documentElement.style.setProperty('--background-color','linear-gradient(to bottom, #120018, #2a003e)')
+    document.documentElement.style.setProperty('--background-color','linear-gradient(to bottom, #120018, #2a003e)');
+    document.documentElement.style.setProperty('--color-text-inverse','white');
     Home.methods.cambioDelogo('dark');
   }
 };

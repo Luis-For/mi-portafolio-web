@@ -198,6 +198,12 @@ export default {
 
   /* Responsive */
   @media (max-width: 768px) {
+
+    .footer{
+      margin: 0%;
+      padding: 0%;
+      max-width: auto;
+    }
     .footer-content {
       grid-template-columns: 1fr;
       text-align: center;

@@ -42,14 +42,15 @@ export default {
 
 <style>
 .contact-container {
-  background: linear-gradient(180deg, #1a0b2e, #2a003e);
+  /*background: linear-gradient(180deg, #1a0b2e, #2a003e);*/
+  background: var(--background-color);
   padding: 1rem 2rem 2rem;
   border-radius: 20px 20px 0 0;
   text-align: center;
 }
 
 .contact-container p, span{
-  color: white;
+  color: var(--color-text-inverse);
 }
 
 .contact-title {
@@ -132,6 +133,8 @@ export default {
   .contact-cards {
     flex-direction: column;
     align-items: center;
+    padding: 0%;
+    margin: 0%;
   }
 }
 
