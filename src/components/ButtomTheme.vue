@@ -1,5 +1,4 @@
 <template>
-  <!-- Switch visual pero funcional -->
   <label class="ui-switch" :aria-label="`Cambiar a modo ${currentTheme === 'light' ? 'oscuro' : 'claro'}`">
     <input
       type="checkbox"
@@ -14,7 +13,6 @@
 
 <script setup>
 import { ref, onMounted, defineEmits } from 'vue';
-import Home from '../pages/Home.vue';
 
 const currentTheme = ref('light');
 const emitter = defineEmits('theme-changed');
@@ -39,7 +37,6 @@ const applyTheme = (theme) => {
     document.documentElement.style.setProperty('--background-color-contact','rgba(42, 42, 74, 1)');
     document.documentElement.style.setProperty('--background-color','linear-gradient(to bottom, #120018, #2a003e)');
     document.documentElement.style.setProperty('--color-text-inverse','white');
-    Home.methods.cambioDelogo('dark');
   }
 };
 

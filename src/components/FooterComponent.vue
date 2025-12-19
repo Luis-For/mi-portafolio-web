@@ -55,16 +55,22 @@
     </div>
 
     <div class="footer-bottom">
-      <span>© 2025 Luis Ángel Fornaris Rodríguez</span>
+      <span>{{year}} © Luis Ángel Fornaris Rodríguez</span>
       <span>Hecho con Vue.js 💜</span>
     </div>
   </footer>
 </template>
 
 <script>
+console.log('Archivo FooterComponent cargado')
 
 export default {
-  name: 'FooterComponent'
+  name: 'FooterComponent',
+  data(){
+    return{
+      year: new Date().getFullYear()
+    }
+  }
 }
 </script>
 
