@@ -63,7 +63,7 @@ export default {
 <style>
 .flotante {
   position: fixed;
-  top: 440px;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.9);
 
@@ -94,6 +94,7 @@ export default {
   font-weight: 700;
   margin-bottom: 10px;
   text-align: center;
+  color: #000;
 }
 
 .content-modal p {
@@ -101,6 +102,7 @@ export default {
   margin-bottom: 10px;
   font-size: 20px;
   text-align: center;
+  color: #000;
 }
 
 .content-modal img {
