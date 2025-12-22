@@ -1,5 +1,5 @@
 <template class="services">
-    <div class="service" v-for="service in services" :key="service" @mouseover="zoom($event.currentTarget)" @mouseout="norm($event.currentTarget)">
+    <div class="service" v-for="service in services" :key="service">
       <img :src="service.image" :alt="service.descriptionImg" class="service-image"/>
       <h1>{{ service.title }}</h1>
       <!--Hover encima-->
@@ -80,18 +80,24 @@ export default{
     color: var(--color-text);
     overflow: hidden;
     transform: scale(0.8);
-}
+  }
 
 /* ===== Capa que sube ===== */
 .service::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(
+    /*background: linear-gradient(
         to top,
         rgb(106, 0, 255),
         rgb(170, 0, 255)
+    );*/
+    background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.396),
+    rgba(199, 163, 230, 0.302)
     );
+    backdrop-filter: blur(50px);
     transform: translateY(100%);
     transition: transform 0.4s ease;
     z-index: 1;
@@ -113,7 +119,7 @@ export default{
     transition: opacity 0.4s ease, transform 0.4s ease;
 
     z-index: 3;
-    color: #000;
+    color: var(--color-text);
 }
 
 /* ===== Hover effects ===== */

@@ -2,7 +2,7 @@
   <nav class="navbar">
     <!-- Logo o nombre del sitio (opcional) -->
     <div class="navbar-brand" id="icon" v-on:mouseover="zoom()" v-on:mouseout="norm()">
-        <img id="logo" src="../assets/image/Systems_and_technology_programming_company_logo-removebg-preview.png" width="150" @change="cambioDelogo"/>
+        <img id="logo" src="../assets/image/Systems_and_technology_programming_company_logo-removebg-preview.png" width="100" @change="cambioDelogo"/>
     </div>
     
     <!-- Botón hamburguesa (solo móvil) -->
